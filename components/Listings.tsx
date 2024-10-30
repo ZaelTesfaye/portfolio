@@ -11,7 +11,7 @@ import AddressSearch from "@/components/AddressSearch";
 import {Button} from "@/components/ui/button";
 
 
-const Listings = ({forSell, setCoordinates}: { type: string }) => {
+const Listings = ({forSell, setCoordinates}) => {
     const [listing, setListing] = useState([]);
     const [bedroom, setBedroom] = useState(0);
     const [bathroom, setBathroom] = useState(0);
