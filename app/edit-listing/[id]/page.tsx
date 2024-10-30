@@ -19,8 +19,8 @@ interface ListingData {
 }
 
 const Page = ({params}: { params: { id: string } }) => {
-        const [images, setImages] = useState();
-        const [isLoading, setIsLoading] = useState(false);
+    const [images, setImages] = useState<FileList | undefined>(undefined);
+    const [isLoading, setIsLoading] = useState(false);
         const {toast} = useToast();
         const router = useRouter();
 
@@ -31,7 +31,7 @@ const Page = ({params}: { params: { id: string } }) => {
             const updatedList = await updateListing(values, params.id);
             if (updatedList.status) {
                 images && Array.from(images).forEach((image) => {
-                        const file = image;
+                        const file = image as File;
                         const fileName = Date.now().toString();
                         const fileExt = fileName.split(".").pop()
 

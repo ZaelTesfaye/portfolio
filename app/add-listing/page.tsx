@@ -30,6 +30,7 @@ const Page = () => {
 
     const router = useRouter();
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleChange = useCallback(
         debounce(async (input: string) => {
             if (input !== "") {
