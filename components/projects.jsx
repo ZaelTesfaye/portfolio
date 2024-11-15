@@ -8,7 +8,7 @@ import typescript from "../assets/images/typescript.png"
 import react from "../assets/images/react.png"
 import reactNative from "../assets/images/reactnative.png"
 import nextJs from "../assets/images/nextjs-icon.png"
-import mongodb from "../assets/images/Mongodb.png"
+import mongodb from "../assets/images/MongoDB.png"
 import firebaseIcon from "../assets/images/firebase.png"
 import supabase from "../assets/images/Supabase.png"
 import express from "../assets/images/express.png"
@@ -20,13 +20,13 @@ import React from "react";
 
 const projects = [
     {
-        title: "Realestate Marketplace",
+        title: "Real estate Marketplace",
         type: "site",
         image: ProjectImage,
         url: "https://next-market-place-v3q4-brp45fs6j-zaeltesfayes-projects.vercel.app/login",
         gitRepo: "https://github.com/ZaelTesfaye/Next-Market-place",
-        alt: "Realestry Marketplace app",
-        description: "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+        alt: "Real estate Marketplace app",
+        description: "Real-estate market platform that allows users to post, edit and access properties for sell and rent in one place.",
         stack: [
             {
                 name: "Next Js",
@@ -44,7 +44,7 @@ const projects = [
         url: "https://chat-on-snappy.netlify.app",
         gitRepo: "https://github.com/ZaelTesfaye/Chat-App",
         alt: "Chat application",
-        description: "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+        description: "Web-based chat application that uses web socket connection to allow real time chat where users can create profile and start conversations instantly.",
         stack: [
             {
                 name: "React",
@@ -65,7 +65,8 @@ const projects = [
         url: "Github",
         gitRepo: "",
         alt: "Business Directory app",
-        description: "lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum",
+        description: "A cross platform mobile app that serves as a one place to access the details and contact information of local businesses with ability " +
+                    "for business owners to post and manage their businesses.",
         stack: [
             {
                 name: "React Native",
