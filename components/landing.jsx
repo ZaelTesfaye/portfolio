@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import {Button} from "./ui/button"
 import {Github, Linkedin} from 'lucide-react'
-import profilePicture from '../assets/images/profile-pic.png'
+import profilePicture from '../assets/images/profile-pic.jpg'
 import NavBar from "./navBar";
 
 export default function Landing() {

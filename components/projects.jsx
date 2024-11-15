@@ -81,18 +81,18 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="bg-white pt-24 px-4 pb-52md:px-8 snap-start hide-scrollbar">
+        <section id="projects" className="bg-white pt-24  px-4 pb-52md:px-8 snap-start hide-scrollbar">
             <div className="max-w-6xl mx-auto">
 
-                <h1 className="text-3xl font-bold text-center mb-4">Projects</h1>
+                <h1 className="text-3xl font-bold text-center">Projects</h1>
 
                 <Carousel opts={{align: "start",}} className="w-full">
-                    <CarouselContent>
+                    <CarouselContent className="px-10 pt-4">
                         {projects.map((project, index) => (
-                            <CarouselItem className="md:basis-1/2 lg:basis-1/3" key={index}>
+                            <CarouselItem className="md:basis-1/2 lg:basis-1/3 transform transition-transform duration-500" key={index}>
 
                                 <div
-                                    className="bg-gray-100 rounded-3xl p-6 flex flex-col border-2 border-gray-400">
+                                    className="bg-gray-100 rounded-3xl p-6 flex flex-col border-2 border-gray-400 h-9/10 hover:scale-105">
                                     <div className="relative w-full aspect-square mb-4 rounded-2xl overflow-hidden">
                                         <Image
                                             src={project.image}

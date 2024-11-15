@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import { Award, GraduationCap } from 'lucide-react'
-import profilePicture from '../assets/images/profile-pic.png'
+import profilePicture from '../assets/images/profile-pic.jpg'
 
 export default function AboutMe() {
     return (
@@ -35,7 +35,7 @@ export default function AboutMe() {
                             <div className="flex-1 p-6 border rounded-xl text-center">
                                 <GraduationCap className="mx-auto mb-2" size={24} />
                                 <h3 className="font-bold mb-1">Education</h3>
-                                <p className="text-gray-600">Attending B.A. Software Engineering at Addis Ababa Science & Technology University</p>
+                                <p className="text-gray-600">Attending B.A. in Software Engineering at Addis Ababa Science & Technology University</p>
                             </div>
                         </div>
                     </div>
