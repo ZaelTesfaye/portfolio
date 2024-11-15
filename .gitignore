@@ -8,12 +8,11 @@
 
 # testing
 /coverage
-
+/.idea
 # next.js
 /.next/
 /out/
 .idea
-/.idea
 # production
 /build
 
