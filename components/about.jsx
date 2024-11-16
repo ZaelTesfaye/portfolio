@@ -13,9 +13,10 @@ export default function AboutMe() {
                         <Image
                             src={profilePicture}
                             alt="Profile"
-                            width={400}
-                            height={400}
+                            width={450}
+                            height={450}
                             className="rounded-3xl"
+                            unoptimized
                         />
                     </div>
 

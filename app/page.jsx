@@ -1,62 +1,93 @@
-'use client'
+'use client';
 
-import React, {useEffect} from 'react';
+import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Landing from "../components/landing";
 import AboutMe from "../components/about";
 import Skills from "../components/skills";
 import Projects from "../components/projects";
 import Contact from "../components/contact";
+import debounce from "../utils/debounce";
 
 const Page = () => {
-    useEffect(() => {
-        const parent = document.querySelector('.snap-container');
-        const scrollYPerView = parent.clientHeight; // Scroll height per snap
+    const containerRef = useRef(null);
+    const [currentSectionId, setCurrentSectionId] = useState(0);
+    const sections = ["landing", "about", "skills", "projects", "contact"];
+    const [isScrolling, setIsScrolling] = useState(false); // Track scrolling state
 
-        const onWheel = (event) => {
-            event.preventDefault();
+    const scrollToSection = (index) => {
+        if (isScrolling || index < 0 || index >= sections.length) return;
 
-            // Check scroll direction and scroll accordingly
-            if (event.deltaY > 0) {
-                scrollDown();
-            } else {
-                scrollUp();
+        const section = document.getElementById(sections[index]);
+        if (section) {
+            setIsScrolling(true);
+            section.scrollIntoView({ behavior: 'smooth' });
+
+            setTimeout(() => {
+                setIsScrolling(false);
+                setCurrentSectionId(index);
+            }, 700); // Matches smooth scroll duration
+        }
+    };
+
+    // Use callback to prevent unnecessary re-creations of the debounced function
+    const handleScroll = useCallback(
+        debounce((deltaY) => {
+            if (isScrolling) return;
+
+            if (deltaY > 0 && currentSectionId < sections.length - 1) {
+                scrollToSection(currentSectionId + 1);
+            } else if (deltaY < 0 && currentSectionId > 0) {
+                scrollToSection(currentSectionId - 1);
             }
+        }, 250), // Increased debounce time for better smoothness
+        [isScrolling, currentSectionId]
+    );
+
+    useEffect(() => {
+        const parent = containerRef.current;
+        if (!parent) return;
+
+        // Declare scroll and touch event handlers
+        const onWheel = (event) => {
+            event.preventDefault(); // Prevent default browser scrolling
+            handleScroll(event.deltaY);
         };
 
-        const scrollUp = () => {
-            const currentScrollY = parent.scrollTop;
-            parent.scroll({
-                top: currentScrollY - scrollYPerView,
-                left: 0,
-                behavior: 'smooth',
-            });
+        const onTouchStart = (event) => {
+            parent.startY = event.touches[0].clientY; // Record initial touch position
         };
 
-        const scrollDown = () => {
-            const currentScrollY = parent.scrollTop;
-            parent.scroll({
-                top: currentScrollY + scrollYPerView,
-                left: 0,
-                behavior: 'smooth',
-            });
+        const onTouchMove = (event) => {
+            if (!parent.startY) return;
+
+            const deltaY = parent.startY - event.touches[0].clientY;
+            handleScroll(deltaY);
         };
 
-        // Attach the event listener to handle mouse wheel scroll
+        // Add event listeners
         parent.addEventListener('wheel', onWheel, { passive: false });
+        parent.addEventListener('touchstart', onTouchStart, { passive: true });
+        parent.addEventListener('touchmove', onTouchMove, { passive: false });
 
-        // Cleanup event listener on component unmount
+        // Cleanup event listeners on component unmount
         return () => {
             parent.removeEventListener('wheel', onWheel);
+            parent.removeEventListener('touchstart', onTouchStart);
+            parent.removeEventListener('touchmove', onTouchMove);
         };
-    }, []);
+    }, [handleScroll]);
 
     return (
         <div>
-            <div className="snap-y snap-mandatory h-screen overflow-y-scroll snap-container">
+            <div
+                ref={containerRef}
+                className="snap-y snap-mandatory h-screen overflow-y-auto snap-container"
+            >
                 <Landing />
                 <AboutMe />
                 <Skills />
-                <Projects /> {/*contact component inside projects for snap screen purpose*/}
+                <Projects />
+                <Contact />
             </div>
         </div>
     );

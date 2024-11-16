@@ -13,8 +13,9 @@ export default function Contact() {
                         <a target="_blank" rel="noopener noreferrer" href="mailto:teszael14@gmail.com?subject=Contact from Portfolio&body=Hi Zeal,"
                               className=" hover:scale-110 flex items-center text-lg   space-x-2 ">
                             <Mail size={30} color={"#bd3e3e"} />
-                            <span className={"text-gray-600"}>Email</span>
+                            <span className={"text-gray-600"}>teszael14@gmail.com</span>
                         </a>
+
                         <div className="w-px h-6 bg-gray-300"></div>
                         <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zael-kassa-983584228/"
                               className=" hover:scale-110 flex items-center text-lg   space-x-2 ">

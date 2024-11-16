@@ -19,6 +19,8 @@ export default function Landing() {
                         layout="fill"
                         objectFit="cover"
                         className="rounded-full"
+                        objectPosition=" top center"
+                        unoptimized
                     />
                 </div>
                 <div className="text-center md:text-left space-y-4">

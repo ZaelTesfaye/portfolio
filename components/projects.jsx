@@ -126,7 +126,7 @@ export default function Projects() {
                     <CarouselPrevious/>
                     <CarouselNext/>
                 </Carousel>
-        <Contact />
+
             </div>
         </section>
     )

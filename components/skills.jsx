@@ -11,12 +11,14 @@ import mySql from "../assets/images/mysql.png"
 import tailwind from "../assets/images/Tailwind.png"
 import React from "react";
 import Image from "next/image";
+import javascript from "../assets/images/javascript.png";
 
 const devSKills = {
     categories: [
         {
             title: "Frontend",
             skills: [
+                {name: "Java Script", icon: javascript},
                 {name: "Type Script", icon: typescript},
                 {name: "Tailwind", icon: tailwind},
                 {name: "React", icon: react},
