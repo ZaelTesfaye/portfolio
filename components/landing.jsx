@@ -24,9 +24,9 @@ export default function Landing() {
                     />
                 </div>
                 <div className="text-center md:text-left space-y-4">
-                    <p className="text-xl">Hello, I'm</p>
+
                     <h2 className="text-4xl md:text-5xl font-bold">Zeal Tesfaye</h2>
-                    <p className="text-2xl md:text-3xl text-gray-600">Web Developer</p>
+                    <p className="text-2xl md:text-3xl text-gray-600">Full-stack Developer</p>
                     <div className="flex justify-center md:justify-start space-x-4">
                         <Button className="hover:scale-110" variant="outline">
                             <a target={"_blank"}
