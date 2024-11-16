@@ -37,7 +37,7 @@ export default function Landing() {
                     </div>
                     <div className="flex justify-center md:justify-start space-x-4 pt-2 pl-6">
                         <a target={"_blank"} rel="noopener noreferrer"
-                           href="https://www.linkedin.com/in/zael-kassa-983584228/"
+                           href="https://www.linkedin.com/in/ZealTesfaye/"
                            className="text-gray-600 hover:text-[#24a9eb]">
                             <Linkedin size={24}/>
                             <span className="sr-only">LinkedIn</span>

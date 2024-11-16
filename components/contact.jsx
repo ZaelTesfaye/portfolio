@@ -17,7 +17,7 @@ export default function Contact() {
                         </a>
 
                         <div className="w-px h-6 bg-gray-300"></div>
-                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/zael-kassa-983584228/"
+                        <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/ZealTesfaye/"
                               className=" hover:scale-110 flex items-center text-lg   space-x-2 ">
                             <Linkedin size={30} color={"#0a8dea"}/>
                             <span className={"text-gray-600"}>LinkedIn</span>
