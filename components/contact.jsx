@@ -3,7 +3,7 @@ import {Linkedin, Mail, Send} from 'lucide-react'
 
 export default function Contact() {
     return (
-        <footer id="contact" className="bg-white pb-16 px-4 md:px-8 pt-28 snap-start">
+        <footer id="contact" className="bg-white pb-16 px-4 md:px-8 pt-24 snap-start">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-sm uppercase text-gray-500 text-center mb-2">Get in Touch</h2>
                 <h1 className="text-4xl font-bold text-center mb-8">Contact Me</h1>

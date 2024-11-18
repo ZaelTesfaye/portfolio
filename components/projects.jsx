@@ -103,7 +103,7 @@ const projects = [
 
 export default function Projects() {
     return (
-        <section id="projects" className="bg-white pt-24 pb-52 snap-start hide-scrollbar">
+        <section id="projects" className="bg-white pt-24  snap-start hide-scrollbar">
             <div className=" mx-40">
 
                 <h1 className="text-3xl font-bold text-center">Projects</h1>
