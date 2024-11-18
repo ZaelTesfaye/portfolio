@@ -62,7 +62,7 @@ export default function Projects() {
                                             {project.type === "site" ?
                                                 <a className={"px-2 w-full "} target="_blank" rel="noopener noreferrer" href={project.url}>Go to Site </a>
                                             :
-                                                <Link href={project.preview.previewPath}>App Preview </Link>
+                                                <Link className={"w-full"} href={project.preview.previewPath}>App Preview </Link>
                                             }
                                         </Button>
                                     </div>
