@@ -33,8 +33,8 @@ export default function AboutMe() {
                     <div className="md:w-2/3 flex flex-col justify-center items-center">
                         <p className="text-gray-700 leading-relaxed">
                             Aspiring software developer with hands-on experience in building web applications and backend systems
-                            using technologies like React, Next JS, Node.js, MongoDB & MySQL. High commitment to learning. Growing
-                            skills in Node.js, with a focus on writing efficient and maintainable code. Eager to contribute to existing &
+                            using technologies: React, Next JS, React Native, Node.js, MongoDB & MySQL. High commitment to learning.
+                            Eager to contribute to existing &
                             new projects with ability to understand and work with minimal supervision.
                         </p>
                         <div className="flex flex-col md:flex-row gap-4 mt-6">
