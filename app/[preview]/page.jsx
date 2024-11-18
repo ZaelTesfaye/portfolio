@@ -35,39 +35,49 @@ const Page = () => {
     };
 
     return (
-        <div className={"m-10 md:m-32"}>
-            <div className={"flex flex-col  md:flex-row justify-between mr-32"}>
-                <div className={"flex flex-row gap-3 mb-5"}>
-                    <Image className={"rounded-full"} src={previewItemDetails.preview?.previewIcon} alt={previewItemDetails.alt} width={100}
-                           height={100} />
+<>        <header
+            className="flex justify-between items-center w-11/12 pl-8 md:pl-24 py-8 z-10 fixed top-0 left-0 right-0 bg-white shadow-md">
+            <Button variant={"outline"}
+                    className="text-xl md:text-3xl font-semibold">
 
-                    <div className={"flex flex-col"}>
-                        <h1 className={"text-3xl"}>{previewItemDetails.title}</h1>
-                        <h1 className={"text-lg text-gray-500"}>Zeal Tesfaye</h1>
-                    </div>
-                </div>
-                <div>
-                    <Button className={"ml-32 mb-10 md:mb-0 md:ml-0"}>
-                        <Link target="_blank" rel="noopener noreferrer"
-                              href={"https://drive.google.com/file/d/1DBFsw5GAQP-AUv0FvwvgTyaiocXH01iv/view?usp=sharing"}>Download
-                            App </Link>
-                    </Button>
+                <Link href={"/"}>Z.T</Link>
+            </Button>
+
+        </header>
+    <div className={"m-10 md:m-32"}>
+        <div className={"flex flex-col  md:flex-row justify-between mr-32"}>
+            <div className={"flex flex-row gap-3 mb-5"}>
+                <Image className={"rounded-full"} src={previewItemDetails.preview?.previewIcon}
+                       alt={previewItemDetails.alt} width={100}
+                       height={100}/>
+
+                <div className={"flex flex-col"}>
+                    <h1 className={"text-3xl"}>{previewItemDetails.title}</h1>
+                    <h1 className={"text-lg text-gray-500"}>Zeal Tesfaye</h1>
                 </div>
             </div>
+            <div>
+                <Button className={"ml-32 mb-10 md:mb-0 md:ml-0"}>
+                    <Link target="_blank" rel="noopener noreferrer"
+                          href={"https://drive.google.com/file/d/1DBFsw5GAQP-AUv0FvwvgTyaiocXH01iv/view?usp=sharing"}>Download
+                        App </Link>
+                </Button>
+            </div>
+        </div>
 
-            <div className={"mx-28"}>
-                <p className={"text-gray-700 mb-6"}>{previewItemDetails.preview?.previewDescription}</p>
-                <div className={"flex flex-row gap-5"}>
+        <div className={"mx-28"}>
+            <p className={"text-gray-700 mb-6"}>{previewItemDetails.preview?.previewDescription}</p>
+            <div className={"flex flex-row gap-5"}>
 
-                    <Carousel opts={{ align: "start", }} className="w-full">
-                        <CarouselContent className="px-10 py-4">
-                            {previewItemDetails.preview?.previewImages?.map((image, index) => (
-                                <CarouselItem
-                                    className="md:basis-1/2 lg:basis-1/3 transform transition-transform duration-500"
-                                    key={index}>
-                                    <Image
-                                        key={index}
-                                        className={"rounded-2xl border-4 border-blue-600 cursor-pointer"}
+                <Carousel opts={{align: "start",}} className="w-full">
+                    <CarouselContent className="px-10 py-4">
+                        {previewItemDetails.preview?.previewImages?.map((image, index) => (
+                            <CarouselItem
+                                className="md:basis-1/2 lg:basis-1/3 transform transition-transform duration-500"
+                                key={index}>
+                                <Image
+                                    key={index}
+                                    className={"rounded-2xl border-4 border-blue-600 cursor-pointer"}
                                         src={image}
                                         alt={`Preview Image ${index + 1}`}
                                         width={250}
@@ -108,6 +118,8 @@ const Page = () => {
                 </div>
             )}
         </div>
+</>
+
     );
 };
 
