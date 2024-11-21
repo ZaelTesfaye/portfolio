@@ -98,13 +98,12 @@ const Page = () => {
                 </div>
             </div>
 
-            {/* Modal for large image */}
+
             {isModalOpen && (
                 <div
                     className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50"
                     onClick={handleBackgroundClick} // Close modal when clicking on the background
                 >
-                    {/* Image container */}
                     <div className="relative ">
                         <Image
                             src={selectedImage}
@@ -114,6 +113,7 @@ const Page = () => {
                             height={800}
                             className="rounded-lg py-1 object-contain max-h-screen max-w-screen" // Ensure image fits within the screen
                         />
+
                     </div>
                 </div>
             )}

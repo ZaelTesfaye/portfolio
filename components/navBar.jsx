@@ -1,7 +1,8 @@
 import React from 'react';
 import {Button} from "./ui/button";
 
-const NavBar = () => {
+const NavBar = ({currentSectionId, setCurrentSectionId}) => {
+    const sections = ["landing", "about", "skills", "projects", "contact"];
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -11,6 +12,8 @@ const NavBar = () => {
                 block: 'start', // Scroll to the top of the element
             });
         }
+        const sectionIndex = sections.findIndex((section, index) => section===id);
+        setCurrentSectionId(sectionIndex);
     };
 
 

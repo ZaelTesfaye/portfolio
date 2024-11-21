@@ -83,7 +83,7 @@ const Page = () => {
                 ref={containerRef}
                 className="snap-y snap-mandatory h-screen overflow-y-auto snap-container"
             >
-                <Landing />
+                <Landing currentSectionId={currentSectionId} setCurrentSectionId={setCurrentSectionId}/>
                 <AboutMe />
                 <Skills />
                 <Projects />

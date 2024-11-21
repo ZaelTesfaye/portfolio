@@ -1,15 +1,26 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import {Button} from "./ui/button"
 import {Github, Linkedin} from 'lucide-react'
 import profilePicture from '../assets/images/profile-pic.jpg'
 import NavBar from "./navBar";
 
-export default function Landing() {
+export default function Landing({currentSectionId, setCurrentSectionId}) {
+    const sections = ["landing", "about", "skills", "projects", "contact"];
+    const scrollToSection = (id) => {
+        const section = document.getElementById(id);
+        if (section) {
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start', // Scroll to the top of the element
+            });
+        }
+        const sectionIndex = sections.findIndex((section, index) => section===id);
+        setCurrentSectionId(sectionIndex);
+    };
 
     return (
         <div id={"landing"} className="pt-2 bg-white mb-32 snap-start h-screen ">
-            <NavBar/>
+            <NavBar currentSectionId={currentSectionId} setCurrentSectionId={setCurrentSectionId}/>
             <main
                 className="flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 md:space-x-12 p-8 md:p-24 mt-32">
                 <div className="w-64 h-64 md:w-80 md:h-80 relative">
@@ -31,9 +42,13 @@ export default function Landing() {
                         <Button className="hover:scale-110" variant="outline">
                             <a target={"_blank"}
                                rel="noopener noreferrer"
-                               href="https://drive.google.com/file/d/1E25lMT-D4n2UbCcK_G88Gh1jMaGIzzpQ/view?usp=sharing">View CV</a>
+                               href="https://drive.google.com/file/d/1E25lMT-D4n2UbCcK_G88Gh1jMaGIzzpQ/view?usp=sharing">View
+                                CV</a>
                         </Button>
-                        <Button className="hover:scale-105"><Link href={"/#contact"}>Contact</Link></Button>
+                        <Button className="hover:scale-105"
+                                onClick={() => scrollToSection('contact')}>
+                            Contact
+                        </Button>
                     </div>
                     <div className="flex justify-center md:justify-start space-x-4 pt-2 pl-6">
                         <a target={"_blank"} rel="noopener noreferrer"
