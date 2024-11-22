@@ -37,14 +37,14 @@ export default function AboutMe() {
                             Eager to contribute to existing &
                             new projects with ability to understand and work with minimal supervision.
                         </p>
-                        <div className="flex flex-col md:flex-row gap-4 mt-6">
-                            <div className="flex-1 p-6 border rounded-xl text-center hover:scale-105">
-                                <Award className="mx-auto mb-2" size={24} />
+                        <div className="flex flex-col md:flex-row md:gap-4 md:mt-6">
+                            <div className="flex-1 p-3 md:p-6 border rounded-xl text-center hover:scale-105">
+                                <Award className="mx-auto md:mb-2" size={24} />
                                 <h3 className="font-bold mb-1 cursor-default">Experience</h3>
                                 <p className="text-gray-600 whitespace-nowrap  cursor-default">~1 year in Web Development</p>
                             </div>
-                            <div className="flex-1 p-6 border rounded-xl text-center hover:scale-105">
-                                <GraduationCap className="mx-auto mb-2" size={24} />
+                            <div className="flex-1  p-3 md:p-6 border rounded-xl text-center hover:scale-105">
+                                <GraduationCap className="mx-auto md:mb-2" size={24} />
                                 <h3 className="font-bold mb-1 cursor-default">Education</h3>
                                 <p className="text-gray-600 cursor-default">Attending B.A. in Software Engineering at Addis Ababa Science & Technology University</p>
                             </div>

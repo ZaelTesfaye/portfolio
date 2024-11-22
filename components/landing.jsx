@@ -42,7 +42,7 @@ export default function Landing({currentSectionId, setCurrentSectionId}) {
                         <Button className="hover:scale-110" variant="outline">
                             <a target={"_blank"}
                                rel="noopener noreferrer"
-                               href="https://drive.google.com/file/d/1E25lMT-D4n2UbCcK_G88Gh1jMaGIzzpQ/view?usp=sharing">View
+                               href="https://drive.google.com/file/d/1NOuloVIYhDjqNniJxbLznbWvLIwC58uY/view?usp=sharing">View
                                 CV</a>
                         </Button>
                         <Button className="hover:scale-105"

@@ -18,11 +18,11 @@ export default function Projects() {
                     <CarouselContent className="px-6 pt-2">
                         {projects.map((project, index) => (
                             <CarouselItem
-                                className="md:basis-1/2 lg:basis-1/3 px-4 transform transition-transform duration-500"
+                                className="min-w-32 md:basis-1/2 lg:basis-1/3 px-4 transform transition-transform duration-500"
                                 key={index}>
 
                                 <div
-                                    className="bg-gray-100 rounded-3xl p-6 flex flex-col border-2 border-gray-400 h-9/10 hover:scale-[1.02]">
+                                    className=" min-w-64 bg-gray-100 rounded-3xl p-6 flex flex-col border-2 border-gray-400 h-9/10 hover:scale-[1.02]">
                                     <div className="relative w-full aspect-square mb-4 rounded-2xl overflow-hidden">
                                         <Image
                                             src={project.image}
@@ -36,10 +36,10 @@ export default function Projects() {
                                     {project.credentials &&
                                         <div>
                                             <div className={"mb-2"}>
-                                                <p><span className={"font-medium"}> Username: </span> <span
+                                                <p><span className={"font-medium text-blue-500"}> Username: </span> <span
                                                     className={"text-gray-500"}>{project.credentials.username}</span>
                                                 </p>
-                                                <p><span className={"font-medium"}> Password: </span> <span
+                                                <p><span className={"font-medium text-blue-500" }> Password: </span> <span
                                                     className={"text-gray-500"}>{project.credentials.password}</span>
                                                 </p>
                                             </div>

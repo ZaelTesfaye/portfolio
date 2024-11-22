@@ -49,7 +49,7 @@ const projects = [
         title: "Chat App",
         type: "site",
         image: ProjectImage2,
-        url: "https://chat-on-snappy.netlify.app",
+        url: "https://chat-on-snappy.netlify.app/login",
         gitRepo: "https://github.com/ZaelTesfaye/Chat-App",
         alt: "Chat application",
         description: "Web-based chat application that uses web socket connection to allow real time chat among all users of the platorm.",
