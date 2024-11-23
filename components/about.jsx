@@ -16,15 +16,15 @@ export default function AboutMe() {
             viewport={{ once: true, amount: 0.2 }}
         >
             <div className="max-w-6xl mx-auto">
-                {/* Title */}
+
                 <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-12">
                     About Me
                 </h1>
 
-                {/* Content */}
+
                 <div className="flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-16">
-                    {/* Profile Picture */}
-                    <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-56 lg:h-56 flex items-center justify-center">
+
+                    <div className="w-28 h-28 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-80 lg:h-80 flex items-center justify-center">
                         <Image
                             src={profilePicture}
                             alt="Profile"
@@ -35,7 +35,6 @@ export default function AboutMe() {
                         />
                     </div>
 
-                    {/* Text and Stats */}
                     <div className="md:w-2/3 flex flex-col items-center text-center md:items-start md:text-left">
                         <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-6">
                             Aspiring software developer with hands-on experience in building web applications and backend systems

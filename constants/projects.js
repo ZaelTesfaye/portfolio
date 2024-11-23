@@ -93,10 +93,7 @@ const projects = [
                 name: "Firebase",
                 icon: firebase
             },
-            {
-                name: "Tailwind",
-                icon: tailwind
-            },
+
         ],
         credentials: {
             username: "Google Sign in",

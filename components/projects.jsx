@@ -8,7 +8,7 @@ import projects from "../constants/projects";
 
 export default function Projects() {
     return (
-        <section id="projects" className="bg-white pt-24 snap-start hide-scrollbar">
+        <section id="projects" className="bg-white pt-24 snap-start hide-scrollbar h-screen">
             <div className="container mx-auto px-4">
                 <h1 className="text-2xl md:text-3xl font-bold text-center">Projects</h1>
 
@@ -19,7 +19,7 @@ export default function Projects() {
                                 className="min-w-full sm:min-w-32 sm:basis-full md:basis-1/2 lg:basis-1/3 px-2 transform transition-transform duration-500"
                                 key={index}
                             >
-                                <div className="min-w-full sm:min-w-64 bg-gray-100 rounded-3xl p-4 md:p-6 flex flex-col border-2 border-gray-400 hover:scale-[1.02]">
+                                <div className="min-w-full sm:min-w-64 bg-gray-100 rounded-3xl p-4 md:p-6  flex flex-col  border-2 border-gray-400 hover:scale-[1.02] lg:h-9/10 " >
                                     <div className="relative w-full aspect-square mb-4 rounded-2xl overflow-hidden">
                                         <Image
                                             src={project.image}
@@ -28,8 +28,10 @@ export default function Projects() {
                                             objectFit="cover"
                                         />
                                     </div>
-                                    <h3 className="text-lg md:text-2xl font-semibold mb-4">{project.title}</h3>
-                                    <p className="text-sm md:text-base mb-2 text-gray-400">{project.description}</p>
+                                    <h3 className="text-lg md:text-2xl font-semibold mb-2 truncate">{project.title}</h3>
+                                    <p className="text-sm md:text-base mb-2 text-gray-400 line-clamp-3 overflow-hidden">
+                                        {project.description}
+                                    </p>
                                     {project.credentials && (
                                         <div>
                                             <div className="mb-2">
