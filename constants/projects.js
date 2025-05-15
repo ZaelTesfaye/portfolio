@@ -5,7 +5,7 @@ import tailwind from "../assets/images/Tailwind.png";
 import ProjectImage2 from "../assets/images/project1.png";
 import react from "../assets/images/react.png";
 import nodejs from "../assets/images/node.png";
-import desoDomains from "../assets/images/desodomains.png";
+import desoDomains from "../assets/images/desoDomains.png";
 import express from "../assets/images/express.png";
 import mongodb from "../assets/images/MongoDB.png";
 import ProjectImage3 from "../assets/images/project3.png";
