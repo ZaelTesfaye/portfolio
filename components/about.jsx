@@ -37,8 +37,8 @@ export default function AboutMe() {
 
                     <div className="md:w-2/3 flex flex-col items-center text-center md:items-start md:text-left">
                         <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed mb-6">
-                            Aspiring software developer with hands-on experience in building web applications and backend systems
-                            using technologies: React, Next JS, React Native, Node.js, MongoDB & MySQL. High commitment to learning.
+                            Aspiring developer with experience in building web applications and backend systems
+                            using technologies: React, Next JS, Node.js SQL & MongoDb. High commitment to learning.
                             Eager to contribute to existing & new projects with ability to understand and work with minimal supervision.
                         </p>
 
@@ -47,7 +47,7 @@ export default function AboutMe() {
                             <div className="flex-1 p-4 border rounded-xl text-center transition-transform transform hover:scale-105">
                                 <Award className="mx-auto mb-2" size={24} />
                                 <h3 className="font-bold mb-1">Experience</h3>
-                                <p className="text-gray-600 text-sm sm:text-base">~1 year in Web Development</p>
+                                <p className="text-gray-600 text-sm sm:text-base">1 year + in Web Development</p>
                             </div>
 
                             {/* Education */}
@@ -55,7 +55,9 @@ export default function AboutMe() {
                                 <GraduationCap className="mx-auto mb-2" size={24} />
                                 <h3 className="font-bold mb-1">Education</h3>
                                 <p className="text-gray-600 text-sm sm:text-base">
-                                    Attending B.A. in Software Engineering at Addis Ababa Science & Technology University
+                                    Attending B.SC in Software Engineering at AASTU
+                                    <br/>
+                                    (Addis Ababa Science & Technology University)
                                 </p>
                             </div>
                         </div>

@@ -5,6 +5,7 @@ import reactNative from "../assets/images/reactnative.png"
 import nextJs from "../assets/images/nextjs-icon.png"
 import mongodb from "../assets/images/MongoDB.png"
 import firebaseIcon from "../assets/images/firebase.png"
+import postgres from "../assets/images/postgres.png";
 import supabase from "../assets/images/Supabase.png"
 import express from "../assets/images/express.png"
 import mySql from "../assets/images/mysql.png"
@@ -45,7 +46,7 @@ const devSKills = {
                 {name: "Mongo db", icon: mongodb},
                 {name: "My Sql", icon: mySql},
                 {name: "FireBase", icon: firebaseIcon},
-                {name: "Supabase", icon: supabase},
+                {name: "Postgres", icon: postgres},
             ]
         },
 

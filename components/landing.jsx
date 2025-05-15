@@ -42,8 +42,7 @@ export default function Landing({currentSectionId, setCurrentSectionId}) {
                         <Button className="hover:scale-110" variant="outline">
                             <a target={"_blank"}
                                rel="noopener noreferrer"
-                               href="https://drive.google.com/file/d/1NOuloVIYhDjqNniJxbLznbWvLIwC58uY/view?usp=sharing">View
-                                CV</a>
+                               href="https://drive.google.com/file/d/1gPpfSuZGR3h1rfAagmxNO--lNb4emWSD/view?usp=sharing">View CV</a>
                         </Button>
                         <Button className="hover:scale-105"
                                 onClick={() => scrollToSection('contact')}>

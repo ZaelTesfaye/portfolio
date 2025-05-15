@@ -1,8 +1,14 @@
-import Image from 'next/image';
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Github } from "lucide-react";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "./ui/carousel";
-import Link from 'next/link';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "./ui/carousel";
+import Link from "next/link";
 import React from "react";
 import projects from "../constants/projects";
 
@@ -16,10 +22,13 @@ export default function Projects() {
                     <CarouselContent className="px-2 md:px-6 pt-4">
                         {projects.map((project, index) => (
                             <CarouselItem
-                                className="min-w-full sm:min-w-32 sm:basis-full md:basis-1/2 lg:basis-1/3 px-2 transform transition-transform duration-500"
                                 key={index}
+                                className="min-w-full sm:min-w-32 sm:basis-full md:basis-1/2 lg:basis-1/3 px-2 transform transition-transform duration-500"
                             >
-                                <div className="min-w-full sm:min-w-64 bg-gray-100 rounded-3xl p-4 md:p-6  flex flex-col  border-2 border-gray-400 hover:scale-[1.02] lg:h-9/10 " >
+                                <div
+                                    className="min-w-full sm:min-w-64 bg-gray-100 rounded-3xl p-4 md:p-6 flex flex-col border-2 border-gray-400 hover:scale-[1.02]"
+                                    style={{ height: "600px" }}
+                                >
                                     <div className="relative w-full aspect-square mb-4 rounded-2xl overflow-hidden">
                                         <Image
                                             src={project.image}
@@ -29,7 +38,7 @@ export default function Projects() {
                                         />
                                     </div>
                                     <h3 className="text-lg md:text-2xl font-semibold mb-2 truncate">{project.title}</h3>
-                                    <p className="text-sm md:text-base mb-2 text-gray-400 line-clamp-3 overflow-hidden">
+                                    <p className="text-sm md:text-base mb-2 text-gray-500 line-clamp-3 overflow-hidden flex-grow">
                                         {project.description}
                                     </p>
                                     {project.credentials && (
@@ -57,18 +66,20 @@ export default function Projects() {
                                         ))}
                                     </div>
 
-                                    <div className="mt-2 flex flex-wrap gap-4">
-                                        <Button variant="outline" className="flex-1 hover:scale-105">
-                                            <Github />
-                                            <Link
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                href={project.gitRepo}
-                                            >
-                                                Github
-                                            </Link>
-                                        </Button>
-                                        <Button className="hover:scale-105">
+                                    <div className="mt-auto flex flex-wrap gap-4">
+                                        {project?.gitRepo && (
+                                            <Button variant="outline" className="flex-1 hover:scale-105">
+                                                <Github />
+                                                <Link
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    href={project.gitRepo}
+                                                >
+                                                    Github
+                                                </Link>
+                                            </Button>
+                                        )}
+                                        <Button className="hover:scale-105 flex-1">
                                             {project.type === "site" ? (
                                                 <a
                                                     className="px-2 w-full"
@@ -89,8 +100,8 @@ export default function Projects() {
                             </CarouselItem>
                         ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <CarouselPrevious className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md" />
+                    <CarouselNext className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md" />
                 </Carousel>
             </div>
         </section>

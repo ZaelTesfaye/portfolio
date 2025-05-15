@@ -5,6 +5,7 @@ import tailwind from "../assets/images/Tailwind.png";
 import ProjectImage2 from "../assets/images/project1.png";
 import react from "../assets/images/react.png";
 import nodejs from "../assets/images/node.png";
+import desoDomains from "../assets/images/desodomains.png";
 import express from "../assets/images/express.png";
 import mongodb from "../assets/images/MongoDB.png";
 import ProjectImage3 from "../assets/images/project3.png";
@@ -19,6 +20,27 @@ import bdImage5 from "../assets/images/bdImage5.png"
 
 
 const projects = [
+    {
+        title: "Deso Domains Auction",
+        type: "site",
+        url: "https://name-swap.vercel.app",
+        image: desoDomains,
+        alt: "Deso Domain Auction",
+        description: "The most advanced auction platform on the deso blockchain that allows to exchange deso domains through instant transfers or extensible auction with modern design.",
+        stack: [
+            {
+                name: "Next Js",
+                icon: nextJs
+            }, {
+                name: "Express JS",
+                icon: express
+            },{
+                name: "Tailwind",
+                icon: tailwind
+            },
+        ],
+
+    },
     {
         title: "Real estate Marketplace",
         type: "site",
@@ -46,13 +68,13 @@ const projects = [
 
     },
     {
-        title: "Chat App",
+        title: "Snappy Chat",
         type: "site",
         image: ProjectImage2,
         url: "https://chat-on-snappy.netlify.app/login",
         gitRepo: "https://github.com/ZaelTesfaye/Chat-App",
         alt: "Chat application",
-        description: "Web-based chat application that uses web socket connection to allow real time chat among all users of the platorm.",
+        description: "A chat app that uses web socket connection to enable real time chat among users.",
         stack: [
             {
                 name: "React",
