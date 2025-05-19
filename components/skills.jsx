@@ -56,21 +56,18 @@ const devSKills = {
 export default function Skills() {
     return (
         <section id="skills"
-                 className="flex w-full justify-center bg-white pt-32 snap-start h-screen overflow-y-scroll  hide-scrollbar">
-            <div className="w-full px-16 pb-20">
-                <h1 className="text-4xl font-bold mb-16 text-center ">Skills</h1>
-
-                <div className="grid md:grid-cols-3 gap-10">
+                 className="flex w-full justify-center bg-white pt-24 sm:pt-32 min-h-screen h-auto overflow-y-scroll hide-scrollbar pb-10">
+            <div className="w-full px-2 sm:px-8 md:px-16 pb-10">
+                <h1 className="text-2xl sm:text-4xl font-bold mb-8 sm:mb-16 text-center ">Skills</h1>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">
                     {devSKills.categories.map((category, index) => (
-                        <div key={index} className="bg-gray-100 rounded-3xl p-12 border-2 border-gray-500 w-full hover:scale-[1.03]">
-                            <h3 className="text-xl font-bold mb-11">{category.title}</h3>
-                            <div className="grid grid-cols-2 gap-12">
+                        <div key={index} className="bg-gray-100 rounded-2xl sm:rounded-3xl p-6 sm:p-12 border-2 border-gray-500 w-full hover:scale-[1.03]">
+                            <h3 className="text-lg sm:text-xl font-bold mb-6 sm:mb-11">{category.title}</h3>
+                            <div className="grid grid-cols-2 gap-6 sm:gap-12">
                                 {category.skills.map((skill, skillIndex) => (
-                                    <div key={skillIndex} className="flex items-center gap-4 hover:scale-105 ">
-                                        <Image src={skill.icon} alt="Skill" width={35} height={35}/>
-                                        <p className="font-medium text-[18px] cursor-default">{skill.name}</p>
-
-
+                                    <div key={skillIndex} className="flex items-center gap-2 sm:gap-4 hover:scale-105 ">
+                                        <Image src={skill.icon} alt="Skill" width={28} height={28} className="sm:w-[35px] sm:h-[35px]"/>
+                                        <p className="font-medium text-[15px] sm:text-[18px] cursor-default">{skill.name}</p>
                                     </div>
                                 ))}
                             </div>

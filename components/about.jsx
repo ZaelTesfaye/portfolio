@@ -9,13 +9,13 @@ export default function AboutMe() {
     return (
         <motion.section
             id="about"
-            className="bg-white  px-4 md:px-8 pt-32 pb-16 snap-start min-h-screen overflow-y-scroll hide-scrollbar"
+            className="bg-white  px-4 md:px-8 pt-32 pb-16 min-h-screen h-auto overflow-y-scroll hide-scrollbar"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
         >
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-5xl mx-auto">
 
                 <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-12">
                     About Me
