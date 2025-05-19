@@ -56,7 +56,7 @@ const devSKills = {
 export default function Skills() {
     return (
         <section id="skills"
-                 className="flex w-full justify-center bg-white pt-24 sm:pt-32 min-h-screen h-auto overflow-y-scroll hide-scrollbar pb-10">
+                 className="flex w-full justify-center bg-white pt-24 sm:pt-32 pb-10">
             <div className="w-full px-2 sm:px-8 md:px-16 pb-10">
                 <h1 className="text-2xl sm:text-4xl font-bold mb-8 sm:mb-16 text-center ">Skills</h1>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-10">

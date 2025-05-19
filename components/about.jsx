@@ -9,7 +9,7 @@ export default function AboutMe() {
     return (
         <motion.section
             id="about"
-            className="bg-white  px-4 md:px-8 pt-32 pb-16 min-h-screen h-auto overflow-y-scroll hide-scrollbar"
+            className="bg-white px-4 md:px-8 pt-32 pb-16"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}

@@ -14,7 +14,7 @@ import projects from "../constants/projects";
 
 export default function Projects() {
     return (
-        <section id="projects" className="bg-white pt-20 sm:pt-24 min-h-screen h-auto pb-10">
+        <section id="projects" className="bg-white pt-20 sm:pt-24 pb-10">
             <div className="container mx-auto px-2 sm:px-4">
                 <h1 className="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4">Projects</h1>
                 <Carousel opts={{ align: "start" }} className="w-full">
