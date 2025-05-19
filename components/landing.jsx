@@ -19,10 +19,10 @@ export default function Landing({currentSectionId, setCurrentSectionId}) {
     };
 
     return (
-        <div id={"landing"} className="pt-2 bg-white mb-24 sm:mb-32 h-auto min-h-screen ">
+        <div id={"landing"} className="pt-2 bg-white mb-24 sm:mb-32 h-auto min-h-screen flex flex-col justify-center">
             <NavBar currentSectionId={currentSectionId} setCurrentSectionId={setCurrentSectionId}/>
             <main
-                className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12 p-4 sm:p-8 md:p-24 mt-24 sm:mt-32">
+                className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12 p-4 sm:p-8 md:p-24 mt-16 sm:mt-24 flex-1 w-full">
                 <div className="w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 relative">
                     <Image
                         src={profilePicture}
