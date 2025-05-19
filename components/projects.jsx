@@ -119,15 +119,15 @@ export default function Projects() {
             ))}
           </CarouselContent>
 
-          {/* Buttons are always visible on small screens */}
-          <div className="sm:hidden flex justify-between absolute top-1/2 left-0 right-0 px-2 z-10 -translate-y-1/2">
-            <CarouselPrevious className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md" />
-            <CarouselNext className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md" />
+          {/* Buttons always visible on small screens */}
+          <div className="sm:hidden flex justify-between absolute top-1/2 left-0 right-0 px-2 z-20 -translate-y-1/2 pointer-events-auto">
+            <CarouselPrevious className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center" />
+            <CarouselNext className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center" />
           </div>
 
           {/* Default buttons for larger screens */}
-          <CarouselPrevious className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md" />
-          <CarouselNext className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md" />
+          <CarouselPrevious className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md w-12 h-12 rounded-full" />
+          <CarouselNext className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md w-12 h-12 rounded-full" />
         </Carousel>
       </div>
     </motion.section>
