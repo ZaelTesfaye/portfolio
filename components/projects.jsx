@@ -28,7 +28,7 @@ export default function Projects() {
       <div className="container mx-auto px-4">
         <h1 className="text-2xl md:text-3xl font-bold text-center">Projects</h1>
 
-        <Carousel opts={{ align: 'start' }} className="w-full relative">
+        <Carousel opts={{ align: 'start' }} className="w-full relative" style={{ overflow: 'visible' }}>
           <CarouselContent className="px-2 md:px-6 pt-4">
             {projects.map((project, index) => (
               <CarouselItem
@@ -120,14 +120,14 @@ export default function Projects() {
           </CarouselContent>
 
           {/* Buttons always visible on small screens */}
-          <div className="sm:hidden flex justify-between absolute top-1/2 left-0 right-0 px-2 z-20 -translate-y-1/2 pointer-events-auto">
-            <CarouselPrevious className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center" />
-            <CarouselNext className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md pointer-events-auto w-10 h-10 rounded-full flex items-center justify-center" />
+          <div className="sm:hidden flex justify-between absolute top-1/2 left-4 right-4 z-30 -translate-y-1/2 pointer-events-auto">
+            <CarouselPrevious className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md pointer-events-auto min-w-10 min-h-10 w-10 h-10 rounded-full flex items-center justify-center" />
+            <CarouselNext className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md pointer-events-auto min-w-10 min-h-10 w-10 h-10 rounded-full flex items-center justify-center" />
           </div>
 
           {/* Default buttons for larger screens */}
-          <CarouselPrevious className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md w-12 h-12 rounded-full" />
-          <CarouselNext className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md w-12 h-12 rounded-full" />
+          <CarouselPrevious className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md min-w-12 min-h-12 w-12 h-12 rounded-full" />
+          <CarouselNext className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md min-w-12 min-h-12 w-12 h-12 rounded-full" />
         </Carousel>
       </div>
     </motion.section>
