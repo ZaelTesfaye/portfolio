@@ -28,6 +28,7 @@ import javascript from '../assets/images/javascript.png';
 import git from '../assets/images/git.png';
 import docker from '../assets/images/docker.png';
 import azure from '../assets/images/azure.png';
+import firebase from "../assets/images/firebase.png"
 
 const devSKills = {
   categories: [
@@ -56,6 +57,7 @@ const devSKills = {
       title: 'Tools',
       skills: [
         { name: 'git', icon: git },
+        { name: 'Firebase', icon: firebase },
         { name: 'Docker', icon: docker },
         { name: 'Azure', icon: azure },
       ],
