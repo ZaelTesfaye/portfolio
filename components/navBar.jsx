@@ -23,7 +23,7 @@ const NavBar = ({currentSectionId, setCurrentSectionId}) => {
             <Button variant={"outline"} onClick={() => scrollToSection("landing")}
                     className="text-lg sm:text-xl md:text-3xl font-semibold mb-2 sm:mb-0">Z.T</Button>
             <nav>
-                <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-4 md:space-x-6">
+                <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-6 md:space-x-8">
                     <li>
                         <button
                             onClick={() => scrollToSection('about')}
