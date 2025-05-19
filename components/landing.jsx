@@ -40,7 +40,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
             opacity: 1,
             scale: 1, // Scale to normal size
             transition: {
-                duration: 0.7,
+                duration: 1,
                 ease: 'easeOut',
             },
         },

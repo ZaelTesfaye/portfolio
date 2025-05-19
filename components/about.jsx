@@ -11,7 +11,7 @@ export default function AboutMe() {
             id="about"
             className="bg-white px-4 md:px-8 pt-32 pb-16"
             initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: -150 }}
+            whileInView={{ opacity: 1, y: -225 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
         >

@@ -20,9 +20,9 @@ export default function Projects() {
     <motion.section
       id="projects"
       className="bg-white pt-24 snap-start hide-scrollbar h-screen"
-      initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: -275 }}
-      transition={{ duration: 0.8, ease: 'easeOut' }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: -255 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container mx-auto px-4">

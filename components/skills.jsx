@@ -68,7 +68,7 @@ export default function Skills() {
       id="skills"
       className="bg-white pt-24 snap-start hide-scrollbar h-screen"
       initial={{ opacity: 0, y: 10 }}
-      whileInView={{ opacity: 1, y: -125 }}
+      whileInView={{ opacity: 1, y: -150 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.2 }}
     >
