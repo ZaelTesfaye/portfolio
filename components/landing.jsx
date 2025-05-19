@@ -96,7 +96,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                             Contact
                         </Button>
                     </div>
-                    <div className="flex justify-center md:justify-start space-x-3 sm:space-x-4 pt-2 pl-2 sm:pl-6">
+                    {/* <div className="flex justify-center md:justify-start space-x-3 sm:space-x-4 pt-2 pl-2 sm:pl-6">
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
@@ -115,7 +115,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                             <Github size={22} />
                             <span className="sr-only">GitHub</span>
                         </a>
-                    </div>
+                    </div> */}
                 </motion.div>
             </motion.main>
         </div>
