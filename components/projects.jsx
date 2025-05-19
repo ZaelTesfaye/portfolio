@@ -37,7 +37,7 @@ export default function Projects() {
               >
                 <div
                   className="min-w-full sm:min-w-64 bg-gray-100 rounded-3xl p-4 md:p-6 flex flex-col border-2 border-gray-400 hover:scale-[1.02]"
-                  style={{ height: '600px' }}
+                  style={{ height: '650px' }}
                 >
                   <div className="relative w-full aspect-square mb-4 rounded-2xl overflow-hidden">
                     <Image

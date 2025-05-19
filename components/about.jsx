@@ -55,9 +55,7 @@ export default function AboutMe() {
                                 <GraduationCap className="mx-auto mb-2" size={24} />
                                 <h3 className="font-bold mb-1">Education</h3>
                                 <p className="text-gray-600 text-sm sm:text-base">
-                                    Attending B.SC in Software Engineering at AASTU
-                                    <br/>
-                                    (Addis Ababa Science & Technology University)
+                                    Attending B.SC in Software Engineering at AASTU (3rd Year)
                                 </p>
                             </div>
                         </div>

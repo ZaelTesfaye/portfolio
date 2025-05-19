@@ -26,7 +26,7 @@ const projects = [
         url: "https://name-swap.vercel.app",
         image: desoDomains,
         alt: "Deso Domain Auction",
-        description: "The most advanced auction platform on the deso blockchain that allows to exchange deso domains through instant transfers or extensible auction with modern design.",
+        description: "Built from scratch with a modern design, DesoDomains.xyz is the most advanced auction platform on the deso blockchain that allows exchanging of domains names through instant transfers or auction of extensible duration.",
         stack: [
             {
                 name: "Next Js",
@@ -41,32 +41,7 @@ const projects = [
         ],
 
     },
-    {
-        title: "Real estate Marketplace",
-        type: "site",
-        image: ProjectImage1,
-        url: "https://next-market-place.vercel.app/",
-        gitRepo: "https://github.com/ZaelTesfaye/Next-Market-place",
-        alt: "Real estate Marketplace app",
-        description: "Real-estate market platform that allows users to post, edit and access properties for sell and rent in one place.",
-        stack: [
-            {
-                name: "Next Js",
-                icon: nextJs
-            }, {
-                name: "Supabase",
-                icon: supabase
-            },{
-                name: "Tailwind",
-                icon: tailwind
-            },
-        ],
-        credentials: {
-            username: "teszael14@gmail.com",
-            password: "test",
-        },
-
-    },
+    
     {
         title: "Snappy Chat",
         type: "site",
@@ -93,6 +68,32 @@ const projects = [
         ],
         credentials: {
             username: "test",
+            password: "test",
+        },
+
+    },
+    {
+        title: "Real estate Marketplace",
+        type: "site",
+        image: ProjectImage1,
+        url: "https://next-market-place.vercel.app/",
+        gitRepo: "https://github.com/ZaelTesfaye/Next-Market-place",
+        alt: "Real estate Marketplace app",
+        description: "Real-estate market platform that allows users to post, edit and access properties for sell and rent in one place.",
+        stack: [
+            {
+                name: "Next Js",
+                icon: nextJs
+            }, {
+                name: "Supabase",
+                icon: supabase
+            },{
+                name: "Tailwind",
+                icon: tailwind
+            },
+        ],
+        credentials: {
+            username: "teszael14@gmail.com",
             password: "test",
         },
 

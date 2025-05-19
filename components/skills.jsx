@@ -25,27 +25,20 @@ import tailwind from '../assets/images/Tailwind.png';
 import cpp from '../assets/images/cpp.png';
 import java from '../assets/images/java.png';
 import javascript from '../assets/images/javascript.png';
+import git from '../assets/images/git.png';
+import docker from '../assets/images/docker.png';
+import azure from '../assets/images/azure.png';
 
 const devSKills = {
   categories: [
-    {
-      title: 'Languages',
-      skills: [
-        { name: 'JavaScript', icon: javascript },
-        { name: 'TypeScript', icon: typescript },
-        { name: 'C++', icon: cpp },
-        { name: 'Java', icon: java },
-      ],
-    },
     {
       title: 'Frontend Technologies',
       skills: [
         { name: 'React', icon: react },
         { name: 'Next.js', icon: nextJs },
         { name: 'React Native', icon: reactNative },
-        { name: 'Tailwind', icon: tailwind },
-        { name: 'JavaScript', icon: javascript },
         { name: 'TypeScript', icon: typescript },
+        { name: 'Tailwind', icon: tailwind },
       ],
     },
     {
@@ -57,6 +50,14 @@ const devSKills = {
         { name: 'MySQL', icon: mySql },
         { name: 'Firebase', icon: firebaseIcon },
         { name: 'Postgres', icon: postgres },
+      ],
+    },
+    {
+      title: 'Tools',
+      skills: [
+        { name: 'git', icon: git },
+        { name: 'Docker', icon: docker },
+        { name: 'Azure', icon: azure },
       ],
     },
   ],
