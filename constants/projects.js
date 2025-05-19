@@ -26,7 +26,7 @@ const projects = [
         url: "https://name-swap.vercel.app",
         image: desoDomains,
         alt: "Deso Domain Auction",
-        description: "Built from scratch with a modern design, DesoDomains.xyz is the most advanced auction platform on the deso blockchain that allows exchanging of domains names through instant transfers or auction of extensible duration.",
+        description: "Designed & Built from scratch with a modern design, DesoDomains.xyz is the most advanced auction platform on the deso blockchain that allows exchanging of domains names through instant transfers or auction of extensible duration.",
         stack: [
             {
                 name: "Next Js",
