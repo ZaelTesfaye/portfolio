@@ -51,7 +51,7 @@ export default function Contact() {
                             className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
                         >
                             <Linkedin size={22}/>
-                            <span className="sr-only">LinkedIn</span>
+                            <span className="">LinkedIn</span>
                         </a>
                     </div>
                 </div>
