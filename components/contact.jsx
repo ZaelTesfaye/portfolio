@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Linkedin, Mail, Send } from 'lucide-react';
+import { Linkedin, Mail, Phone, Send } from 'lucide-react';
 
 export default function Contact() {
     return (
@@ -23,10 +23,24 @@ export default function Contact() {
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
+                             href="tel:+251976440123"
+                            className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
+                        >
+                            <Phone size={24} className="sm:w-[30px] sm:h-[30px]" color="green" />
+                            <span className="text-gray-600">+251976440123</span>
+                        </a>
+
+                        <div className="hidden sm:block w-px h-6 bg-gray-300"></div>
+                        <div className="block sm:hidden h-px w-6 bg-gray-300 my-2"></div>
+
+
+                        <a
+                            target="_blank"
+                            rel="noopener noreferrer"
                             href="mailto:teszael14@gmail.com?subject=Contact from Portfolio&body=Hi Zeal,"
                             className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
                         >
-                            <Mail size={24} className="sm:w-[30px] sm:h-[30px]" color="#bd3e3e"/>
+                            <Mail size={24} className="sm:w-[30px] sm:h-[30px]" color="#bd3e3e" />
                             <span className="text-gray-600">teszael14@gmail.com</span>
                         </a>
                         <div className="hidden sm:block w-px h-6 bg-gray-300"></div>
@@ -37,7 +51,7 @@ export default function Contact() {
                             href="https://t.me/zealtesfaye"
                             className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
                         >
-                            <Send size={24} className="sm:w-[30px] sm:h-[30px]" color="#24a9eb"/>
+                            <Send size={24} className="sm:w-[30px] sm:h-[30px]" color="#24a9eb" />
                             <span className="text-gray-600">Telegram</span>
                         </a>
 
@@ -50,7 +64,7 @@ export default function Contact() {
                             href="https://www.linkedin.com/in/ZealTesfaye"
                             className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
                         >
-                            <Linkedin size={22}/>
+                            <Linkedin size={22} />
                             <span className="">LinkedIn</span>
                         </a>
                     </div>
