@@ -6,10 +6,11 @@ import Image from "next/image";
 import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "../../components/ui/carousel";
 import {Button} from "../../components/ui/button";
 import Link from "next/link";
+import NavBar from "../../components/navBar";
 
 const Page = () => {
     const [isModalOpen, setModalOpen] = useState(false);
-    const [selectedImage, setSelectedImage] = useState(null);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const previewItem = usePathname().split("/")[1]; // Get the first path segment
     const previewItemDetails = projects.find(project => project.preview?.previewPath === previewItem); // Correct access to previewPath
@@ -18,14 +19,21 @@ const Page = () => {
         return <div>Project not found</div>; // Fallback if no project is found
     }
 
-    const handleImageClick = (image) => {
-        setSelectedImage(image);
+    const handleImageClick = (index) => {
+        setCurrentIndex(index);
         setModalOpen(true);
-    };
+    }; 
 
     const closeModal = () => {
         setModalOpen(false);
-        setSelectedImage(null);
+    };
+
+    const goToNext = () => {
+        setCurrentIndex((prev) => (prev + 1) % previewItemDetails.preview?.previewImages.length);
+    };
+
+    const goToPrev = () => {
+        setCurrentIndex((prev) => (prev - 1 + previewItemDetails.preview?.previewImages.length) % previewItemDetails.preview?.previewImages.length);
     };
 
     const handleBackgroundClick = (e) => {
@@ -36,13 +44,7 @@ const Page = () => {
 
     return (
         <>
-            <header
-                className="flex flex-col sm:flex-row justify-between items-center w-full sm:w-11/12 px-2 sm:pl-8 md:pl-24 py-4 sm:py-8 z-10 fixed top-0 left-0 right-0 bg-white shadow-md">
-                <Button variant={"outline"}
-                        className="text-lg sm:text-xl md:text-3xl border-none font-semibold">
-                    <Link href={"/"}>Z.T</Link>
-                </Button>
-            </header>
+            <NavBar />
             <div className={"m-4 sm:m-10 mt-28 sm:mt-32 md:m-32"}>
                 <div className={"flex flex-col md:flex-row justify-between md:mr-32"}>
                     <div className={"flex flex-row gap-2 sm:gap-3 mb-5"}>
@@ -62,7 +64,7 @@ const Page = () => {
                     </div>
                 </div>
                 <div className={"mx-2 sm:mx-10 md:mx-28"}>
-                    <p className={"text-gray-700 mb-4 sm:mb-6 text-sm sm:text-base"}>{previewItemDetails.preview?.previewDescription}</p>
+                    <p className={"text-muted-foreground mb-4 sm:mb-6 text-sm sm:text-base"}>{previewItemDetails.preview?.previewDescription}</p>
                     <div className={"flex flex-row gap-2 sm:gap-5"}>
                         <Carousel opts={{align: "start",}} className="w-full">
                             <CarouselContent className="px-2 sm:px-10 py-2 sm:py-4">
@@ -77,7 +79,7 @@ const Page = () => {
                                             alt={`Preview Image ${index + 1}`}
                                             width={180}
                                             height={180}
-                                            onClick={() => handleImageClick(image)}
+                                            onClick={() => handleImageClick(index)}
                                         />
                                     </CarouselItem>
                                 ))}
@@ -98,9 +100,15 @@ const Page = () => {
                         className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 px-2 sm:px-0"
                         onClick={handleBackgroundClick}
                     >
-                        <div className="relative ">
+                        <button
+                            onClick={(e) => { e.stopPropagation(); goToPrev(); }}
+                            className="absolute left-4 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-3 z-10 text-2xl"
+                        >
+                            ‹
+                        </button>
+                        <div className="relative">
                             <Image
-                                src={selectedImage}
+                                src={previewItemDetails.preview?.previewImages[currentIndex]}
                                 alt="Selected Image"
                                 layout="intrinsic"
                                 width={250}
@@ -108,6 +116,12 @@ const Page = () => {
                                 className="rounded-lg py-1 object-contain max-h-[80vh] max-w-[90vw] sm:max-h-screen sm:max-w-screen"
                             />
                         </div>
+                        <button
+                            onClick={(e) => { e.stopPropagation(); goToNext(); }}
+                            className="absolute right-4 text-white bg-black bg-opacity-50 hover:bg-opacity-75 rounded-full p-3 z-10 text-2xl"
+                        >
+                            ›
+                        </button>
                     </div>
                 )}
             </div>

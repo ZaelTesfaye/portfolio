@@ -1,8 +1,10 @@
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 
-const NavBar = ({ currentSectionId, setCurrentSectionId }) => {
+const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => {} }) => {
+    const router = useRouter();
     const sections = ["landing", "about", "skills", "projects", "contact"];
 
     const scrollToSection = (id) => {
@@ -10,8 +12,11 @@ const NavBar = ({ currentSectionId, setCurrentSectionId }) => {
         if (section) {
             section.scrollIntoView({
                 behavior: 'smooth',
-                block: 'start', // Scroll to the top of the element
+                block: 'start',
             });
+        } else {
+            // If section not found (e.g., on preview page), navigate to home page with hash
+            router.push(`/#${id}`);
         }
         const sectionIndex = sections.findIndex((section, index) => section === id);
         setCurrentSectionId(sectionIndex);

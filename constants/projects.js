@@ -117,7 +117,7 @@ const projects = [
     stack: [
       {
         name: "React Native",
-        icon: reactNative,
+        icon: react,
       },
       {
         name: "Firebase",
