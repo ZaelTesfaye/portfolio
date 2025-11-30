@@ -4,13 +4,6 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Github } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from './ui/carousel';
 import Link from 'next/link';
 import React from 'react';
 import projects from '../constants/projects';
@@ -19,24 +12,23 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="bg-white pt-24 snap-start hide-scrollbar h-screen"
+      className="bg-background pt-24 snap-start hide-scrollbar min-h-screen"
       initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: -255 }}
+      whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="container mx-auto px-4">
-        <h1 className="text-2xl md:text-3xl font-bold text-center">Projects</h1>
+      <div className="w-full flex flex-col gap-4 items-center px-4">
+        <h1 className="text-2xl md:text-3xl font-bold text-center">Latest Projects</h1>
 
-        <Carousel opts={{ align: 'start' }} className="w-full relative" style={{ overflow: 'visible' }}>
-          <CarouselContent className="px-2 md:px-6 pt-4">
+        <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-6 pt-4">
             {projects.map((project, index) => (
-              <CarouselItem
+              <div
                 key={index}
-                className="min-w-full sm:min-w-32 sm:basis-full md:basis-1/2 lg:basis-1/3 px-2 transform transition-transform duration-500"
+                className="px-2 transform transition-transform duration-500"
               >
                 <div
-                  className="min-w-full sm:min-w-64 bg-gray-100 rounded-3xl p-4 md:p-6 flex flex-col border-2 border-gray-400 hover:scale-[1.02]"
+                  className="min-w-full sm:min-w-64 bg-card text-card-foreground rounded-3xl p-4 md:p-6 flex flex-col border-2 border-border hover:scale-[1.02] hover:cursor-pointer transition-transform duration-300"
                   style={{ height: '650px' }}
                 >
                   <div className="relative w-full aspect-square mb-4 rounded-2xl overflow-hidden">
@@ -50,7 +42,7 @@ export default function Projects() {
                   <h3 className="text-lg md:text-2xl font-semibold mb-2 truncate">
                     {project.title}
                   </h3>
-                  <p className="text-sm md:text-base mb-2 text-gray-500 line-clamp-3 overflow-hidden flex-grow">
+                  <p className="text-sm md:text-base mb-2 text-muted-foreground line-clamp-3 overflow-hidden flex-grow">
                     {project.description}
                   </p>
                   {project.credentials && (
@@ -59,7 +51,7 @@ export default function Projects() {
                         <span className="font-medium text-blue-500">
                           Username:
                         </span>{' '}
-                        <span className="text-gray-500">
+                        <span className="text-muted-foreground">
                           {project.credentials.username}
                         </span>
                       </p>
@@ -67,7 +59,7 @@ export default function Projects() {
                         <span className="font-medium text-blue-500">
                           Password:
                         </span>{' '}
-                        <span className="text-gray-500">
+                        <span className="text-muted-foreground">
                           {project.credentials.password}
                         </span>
                       </p>
@@ -86,7 +78,7 @@ export default function Projects() {
 
                   <div className="mt-auto flex flex-wrap gap-4">
                     {project?.gitRepo && (
-                      <Button variant="outline" className="flex-1 hover:scale-105">
+                      <Button variant="outline" className="flex-1">
                         <Github />
                         <Link
                           target="_blank"
@@ -97,7 +89,7 @@ export default function Projects() {
                         </Link>
                       </Button>
                     )}
-                    <Button className="hover:scale-105 flex-1">
+                    <Button className="flex-1">
                       {project.type === 'site' ? (
                         <a
                           className="px-2 w-full"
@@ -115,20 +107,9 @@ export default function Projects() {
                     </Button>
                   </div>
                 </div>
-              </CarouselItem>
+              </div>
             ))}
-          </CarouselContent>
-
-          {/* Buttons always visible on small screens */}
-          <div className="sm:hidden flex justify-between absolute top-1/2 left-4 right-4 z-30 -translate-y-1/2 pointer-events-auto">
-            <CarouselPrevious className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md pointer-events-auto min-w-10 min-h-10 w-10 h-10 rounded-full flex items-center justify-center" />
-            <CarouselNext className="bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md pointer-events-auto min-w-10 min-h-10 w-10 h-10 rounded-full flex items-center justify-center" />
           </div>
-
-          {/* Default buttons for larger screens */}
-          <CarouselPrevious className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md min-w-12 min-h-12 w-12 h-12 rounded-full" />
-          <CarouselNext className="hidden sm:flex bg-blue-500 text-white hover:bg-blue-600 border-none shadow-md min-w-12 min-h-12 w-12 h-12 rounded-full" />
-        </Carousel>
       </div>
     </motion.section>
   );

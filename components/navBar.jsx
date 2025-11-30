@@ -1,7 +1,8 @@
 import React from 'react';
-import {Button} from "./ui/button";
+import { Button } from "./ui/button";
+import { ThemeToggle } from "./ThemeToggle";
 
-const NavBar = ({currentSectionId, setCurrentSectionId}) => {
+const NavBar = ({ currentSectionId, setCurrentSectionId }) => {
     const sections = ["landing", "about", "skills", "projects", "contact"];
 
     const scrollToSection = (id) => {
@@ -12,46 +13,52 @@ const NavBar = ({currentSectionId, setCurrentSectionId}) => {
                 block: 'start', // Scroll to the top of the element
             });
         }
-        const sectionIndex = sections.findIndex((section, index) => section===id);
+        const sectionIndex = sections.findIndex((section, index) => section === id);
         setCurrentSectionId(sectionIndex);
     };
 
 
     return (
         <header
-            className="flex flex-col sm:flex-row justify-between items-center w-full sm:w-11/12 px-2 sm:pl-8 md:pl-24 py-4 sm:py-8 z-10 fixed top-0 left-0 right-0 bg-white shadow-md">
-            <Button variant={"outline"} onClick={() => scrollToSection("landing")}
-                    className="text-lg sm:text-xl md:text-3xl font-semibold mb-2 sm:mb-0">Z.T</Button>
-            <nav>
-                <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-6 md:space-x-8">
+            className="flex flex-col sm:flex-row justify-between items-center w-full px-2 sm:px-16 sm:pl-8 md:pl-24 py-4 sm:py-8 z-10 fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md border-b border-border/40 shadow-sm transition-all duration-300">
+            {/* Logo */}
+            <div className="flex items-center gap-4 mb-2 sm:mb-0">
+                <Button variant={"outline"} onClick={() => scrollToSection("landing")}
+                    className="text-lg sm:text-xl md:text-3xl border-none  font-semibold">Z.T</Button>
+            </div>
+            <nav className="flex items-center gap-5">
+                <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-6 md:space-x-8 items-center">
                     <li>
                         <button
                             onClick={() => scrollToSection('about')}
-                            className="hover:text-gray-600 font-medium text-[15px] sm:text-[17px]">
+                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
                             About
                         </button>
                     </li>
                     <li>
                         <button onClick={() => scrollToSection('skills')}
-                                className="hover:text-gray-600 font-medium text-[15px] sm:text-[17px]">
+                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
                             Skills
                         </button>
                     </li>
                     <li>
                         <button
                             onClick={() => scrollToSection('projects')}
-                            className="hover:text-gray-600 font-medium text-[15px] sm:text-[17px]">
+                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
                             Projects
                         </button>
                     </li>
                     <li>
                         <button
                             onClick={() => scrollToSection('contact')}
-                            className="hover:text-gray-600 font-medium text-[15px] sm:text-[17px]">
+                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
                             Contact
                         </button>
                     </li>
                 </ul>
+                <div className="">
+                    <ThemeToggle />
+                </div>
             </nav>
         </header>
 

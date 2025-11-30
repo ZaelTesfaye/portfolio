@@ -1,13 +1,13 @@
 'use client';
 
-import {motion} from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import {Button} from './ui/button';
-import {Github, Linkedin} from 'lucide-react';
+import { Button } from './ui/button';
+import { Github, Linkedin } from 'lucide-react';
 import profilePicture from '../assets/images/profile-pic.jpg';
 import NavBar from './navBar';
 
-export default function Landing({currentSectionId, setCurrentSectionId}) {
+export default function Landing({ currentSectionId, setCurrentSectionId }) {
     const sections = ['landing', 'about', 'skills', 'projects', 'contact'];
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -23,7 +23,7 @@ export default function Landing({currentSectionId, setCurrentSectionId}) {
 
     // Container animation variants
     const containerVariants = {
-        hidden: {opacity: 0},
+        hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
@@ -35,7 +35,7 @@ export default function Landing({currentSectionId, setCurrentSectionId}) {
 
     // Child animation variants (for image and text)
     const childVariants = {
-        hidden: {opacity: 0, scale: 0.8}, // Start smaller and transparent
+        hidden: { opacity: 0, scale: 0.8 }, // Start smaller and transparent
         visible: {
             opacity: 1,
             scale: 1, // Scale to normal size
@@ -49,15 +49,15 @@ export default function Landing({currentSectionId, setCurrentSectionId}) {
     return (
         <div
             id="landing"
-            className="pt-2 bg-white mb-24 sm:mb-32 h-auto min-h-screen flex flex-col justify-center"
+            className="pt-2 bg-background h-auto min-h-screen flex flex-col justify-center"
         >
-            <NavBar currentSectionId={currentSectionId} setCurrentSectionId={setCurrentSectionId}/>
+            <NavBar currentSectionId={currentSectionId} setCurrentSectionId={setCurrentSectionId} />
             <motion.main
-                className="flex flex-col md:flex-row items-center justify-center space-y-6 md:space-y-0 md:space-x-12 p-4 sm:p-8 md:p-24 mt-16 sm:mt-24 flex-1 w-full"
+                className="flex flex-col md:flex-row items-center justify-center w-full px-4 sm:px-8 md:px-12 gap-8 md:gap-12"
                 variants={containerVariants}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{once: true, amount: 0.3}} // Trigger when 30% of the element is in view
+                viewport={{ once: true, amount: 0.3 }} // Trigger when 30% of the element is in view
             >
                 <motion.div
                     className="w-40 h-40 sm:w-56 sm:h-56 md:w-80 md:h-80 relative"
@@ -78,7 +78,7 @@ export default function Landing({currentSectionId, setCurrentSectionId}) {
                     variants={childVariants}
                 >
                     <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">Zeal Tesfaye</h2>
-                    <p className="text-lg sm:text-2xl md:text-3xl text-gray-600">Full-stack Developer</p>
+                    <p className="text-lg sm:text-2xl md:text-3xl text-muted-foreground">Full-stack Developer</p>
                     <div className="flex justify-center md:justify-start space-x-2 sm:space-x-4">
                         <Button className="hover:scale-110 text-xs sm:text-base" variant="outline">
                             <a
@@ -101,18 +101,18 @@ export default function Landing({currentSectionId, setCurrentSectionId}) {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://www.linkedin.com/in/ZealTesfaye/"
-                            className="text-gray-600 hover:text-[#24a9eb]"
+                            className="text-muted-foreground hover:text-[#24a9eb]"
                         >
-                            <Linkedin size={22}/>
+                            <Linkedin size={22} />
                             <span className="sr-only">LinkedIn</span>
                         </a>
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://github.com/ZaelTesfaye"
-                            className="text-gray-600 hover:text-blue-800"
+                            className="text-muted-foreground hover:text-blue-800"
                         >
-                            <Github size={22}/>
+                            <Github size={22} />
                             <span className="sr-only">GitHub</span>
                         </a>
                     </div>
