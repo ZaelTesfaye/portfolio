@@ -9,8 +9,8 @@ export default function AboutMe() {
     return (
         <motion.section
             id="about"
-            className="bg-background px-4 md:px-8  mt-44 sm:mt-52"
-            initial={{ opacity: 0, y: 5 }}
+            className="bg-background px-4 md:px-8  mt-16 sm:mt-20"
+            initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
@@ -26,14 +26,14 @@ export default function AboutMe() {
 
                     <div className="relative w-48  h-48 sm:w-56 sm:h-56 lg:w-80 lg:h-80 flex items-center justify-center overflow-hidden">
                         <Image
-                        src={profilePicture}
-                        alt="Name"
-                        layout="fill"
-                        objectFit="cover"
-                        className="rounded-full"
-                        objectPosition="top center" 
-                        unoptimized
-                    />
+                            src={profilePicture}
+                            alt="Name"
+                            layout="fill"
+                            objectFit="cover"
+                            className="rounded-full grayscale"
+                            objectPosition="top center"
+                            unoptimized
+                        />
                     </div>
 
                     <div className="md:w-2/3 flex flex-col items-center text-center md:items-start md:text-left">

@@ -8,9 +8,9 @@ export default function Contact() {
     return (
         <motion.footer
             id="contact"
-            className="bg-background pb-10 sm:pb-16 mx-2 sm:mx-8 md:px-8 pt-16 sm:pt-24"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: -150 }}
+            className="bg-background pb-10 sm:pb-16 mx-2 sm:mx-8 md:px-8 pt-44 sm:pt-52"
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
         >
@@ -24,7 +24,7 @@ export default function Contact() {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="tel:+251976440123"
-                            className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
+                            className="hover:scale-105 flex items-center text-base sm:text-lg space-x-2 transition-transform duration-500"
                         >
                             <Phone size={24} className="sm:w-[30px] sm:h-[30px]" color="green" />
                             <span className="text-muted-foreground">+251976440123</span>
@@ -38,7 +38,7 @@ export default function Contact() {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="mailto:teszael14@gmail.com?subject=Contact from Portfolio&body=Hi Zeal,"
-                            className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
+                            className="hover:scale-105 flex items-center text-base sm:text-lg space-x-2 transition-transform duration-500"
                         >
                             <Mail size={24} className="sm:w-[30px] sm:h-[30px]" color="#bd3e3e" />
                             <span className="text-muted-foreground">teszael14@gmail.com</span>
@@ -49,7 +49,7 @@ export default function Contact() {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://t.me/zealtesfaye"
-                            className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
+                            className="hover:scale-105 flex items-center text-base sm:text-lg space-x-2 transition-transform duration-500"
                         >
                             <Send size={24} className="sm:w-[30px] sm:h-[30px]" color="#24a9eb" />
                             <span className="text-muted-foreground">Telegram</span>
@@ -62,7 +62,7 @@ export default function Contact() {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://www.linkedin.com/in/ZealTesfaye"
-                            className="hover:scale-110 flex items-center text-base sm:text-lg space-x-2"
+                            className="hover:scale-105 flex items-center text-base sm:text-lg space-x-2 transition-transform duration-500"
                         >
                             <Linkedin size={22} />
                             <span className="">LinkedIn</span>

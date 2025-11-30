@@ -39,7 +39,7 @@ const Page = () => {
             <header
                 className="flex flex-col sm:flex-row justify-between items-center w-full sm:w-11/12 px-2 sm:pl-8 md:pl-24 py-4 sm:py-8 z-10 fixed top-0 left-0 right-0 bg-white shadow-md">
                 <Button variant={"outline"}
-                        className="text-lg sm:text-xl md:text-3xl font-semibold">
+                        className="text-lg sm:text-xl md:text-3xl border-none font-semibold">
                     <Link href={"/"}>Z.T</Link>
                 </Button>
             </header>

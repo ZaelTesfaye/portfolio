@@ -23,8 +23,9 @@ const NavBar = ({ currentSectionId, setCurrentSectionId }) => {
             className="flex flex-col sm:flex-row justify-between items-center w-full px-2 sm:px-16 sm:pl-8 md:pl-24 py-4 sm:py-8 z-10 fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md border-b border-border/40 shadow-sm transition-all duration-300">
             {/* Logo */}
             <div className="flex items-center gap-4 mb-2 sm:mb-0">
-                <Button variant={"outline"} onClick={() => scrollToSection("landing")}
-                    className="text-lg sm:text-xl md:text-3xl border-none  font-semibold">Z.T</Button>
+                <Button variant={"ghost"} onClick={() => scrollToSection("landing")}
+                    className="text-lg sm:text-xl md:text-3xl border-none  font-semibold">Z.T
+                </Button>
             </div>
             <nav className="flex items-center gap-5">
                 <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-6 md:space-x-8 items-center">

@@ -30,7 +30,7 @@ const devSKills = {
       skills: [
         { name: 'React', icon: react },
         { name: 'Next.js', icon: nextJs },
-        { name: 'React Native', icon: reactNative },
+        { name: 'React Native', icon: react },
         { name: 'TypeScript', icon: typescript },
         { name: 'Tailwind', icon: tailwind },
       ],
@@ -62,8 +62,8 @@ export default function Skills() {
   return (
     <motion.section
       id="skills"
-      className="bg-background pt-24 snap-start hide-scrollbar min-h-screen"
-      initial={{ opacity: 0, y: 10 }}
+      className="bg-background pt-52"
+      initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.2 }}
@@ -73,11 +73,16 @@ export default function Skills() {
           Skills
         </h1>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 px-2 md:px-6 pt-4">
+        <div className="lg:ml-20 grid grid-cols-1 lg:grid-cols-3 gap-6 pt-4">
           {devSKills.categories.map((category, index) => (
             <div
               key={index}
-              className="px-2"
+              // className="px-2"
+              className={`hover:cursor-pointer ${
+                  index === 0 ? 'lg:-ml-20' :
+                  index === 1 ? 'lg:-ml-20 lg:mt-10' : ''
+              } ${index === 2 ? 'lg:-ml-20 lg:mr-10 lg:mt-20' : ''}`}
+            
             >
               <div
                 className="min-w-96 bg-card text-card-foreground rounded-3xl p-4 md:p-6 flex flex-col border-2 border-border hover:scale-[1.02] transition-transform transform duration-300"
