@@ -57,7 +57,7 @@ const NavBar = ({ currentSectionId, setCurrentSectionId }) => {
                         </button>
                     </li>
                 </ul>
-                <div className="">
+                <div className="flex items-center">
                     <ThemeToggle />
                 </div>
             </nav>

@@ -2,61 +2,99 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Award, GraduationCap } from 'lucide-react';
+import { Award, GraduationCap, Code } from 'lucide-react';
 import profilePicture from '../assets/images/profile-pic.jpg';
 
 export default function AboutMe() {
     return (
         <motion.section
             id="about"
-            className="bg-background px-4 md:px-8  mt-16 sm:mt-20"
+            className="bg-background px-4 md:px-8 mt-16 sm:mt-20"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
             viewport={{ once: true, amount: 0.2 }}
         >
-            <div className="max-w-5xl mx-auto">
-
-                <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 md:mb-12">
+            <div className="max-w-6xl mx-auto">
+                <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-20">
                     About Me
                 </h1>
 
+                <div className="flex flex-col md:flex-row justify-center items-center gap-12 lg:gap-24">
 
-                <div className="flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-16">
+                    {/* Image Container */}
+                    <div className="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96 group">
+                        {/* Floating Animation Wrapper */}
+                        <motion.div
+                            animate={{ y: [0, -15, 0] }}
+                            transition={{
+                                duration: 6,
+                                repeat: Infinity,
+                                ease: "easeInOut"
+                            }}
+                            className="w-full h-full relative"
+                        >
+                            {/* Background Glow/Blob */}
+                            <div
+                                className="absolute inset-4 bg-gradient-to-tr from-blue-500/30 to-purple-500/30 rounded-full blur-3xl -z-10 transition-all duration-500 group-hover:bg-blue-500/40"
+                            />
 
-                    <div className="relative w-48  h-48 sm:w-56 sm:h-56 lg:w-80 lg:h-80 flex items-center justify-center overflow-hidden">
-                        <Image
-                            src={profilePicture}
-                            alt="Name"
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-full grayscale"
-                            objectPosition="top center"
-                            unoptimized
-                        />
+                            {/* Main Image Card */}
+                            <div className="w-full h-full rounded-full border-[6px] border-background shadow-2xl overflow-hidden relative">
+                                <Image
+                                    src={profilePicture}
+                                    alt="Zeal Tesfaye"
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="grayscale group-hover:grayscale-0 transition-all duration-500 scale-105"
+                                    objectPosition="top center"
+                                    unoptimized
+                                />
+                                {/* Glass Shine */}
+                                <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                            </div>
+
+                            {/* Floating Icons */}
+                            <motion.div
+                                className="absolute -right-2 top-10 bg-card/90 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-border/50 flex items-center justify-center z-10"
+                                animate={{ y: [0, 10, 0], rotate: [0, 5, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+                            >
+                                <Code className="text-blue-500 w-6 h-6" />
+                            </motion.div>
+
+                            <motion.div
+                                className="absolute -left-4 bottom-20 bg-card/90 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-border/50 flex items-center justify-center z-10"
+                                animate={{ y: [0, -10, 0], rotate: [0, -5, 0] }}
+                                transition={{ duration: 5, repeat: Infinity, delay: 1 }}
+                            >
+                                <Code className="text-blue-500 w-6 h-6" />
+                            </motion.div>
+                        </motion.div>
                     </div>
 
-                    <div className="md:w-2/3 flex flex-col items-center text-center md:items-start md:text-left">
-                        <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-6">
+                    {/* Text Content */}
+                    <div className="md:w-1/2 flex flex-col items-center text-center md:items-start md:text-left">
+                        <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-8">
                             Aspiring developer with experience in building web applications and backend systems
                             using technologies: React, Next JS, Node.js SQL & MongoDb. High commitment to learning.
                             Eager to contribute to existing & new projects with ability to work with minimal supervision.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4">
+                        <div className="flex flex-col sm:flex-row gap-4 w-full">
                             {/* Experience */}
-                            <div className="flex-1 p-4 border rounded-xl text-center transition-transform transform hover:scale-105">
-                                <Award className="mx-auto mb-2" size={24} />
-                                <h3 className="font-bold mb-1">Experience</h3>
-                                <p className="text-muted-foreground text-sm sm:text-base">1 year + in Web Development</p>
+                            <div className="flex-1 p-6 border border-border/50 bg-card/50 backdrop-blur-sm rounded-2xl text-center transition-all duration-300 hover:scale-105 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10">
+                                <Award className="mx-auto mb-3 text-blue-500" size={28} />
+                                <h3 className="font-bold mb-1 text-lg">Experience</h3>
+                                <p className="text-muted-foreground text-sm">1 year + <br />in Web Development</p>
                             </div>
 
                             {/* Education */}
-                            <div className="flex-1 p-4 border rounded-xl text-center transition-transform transform hover:scale-105">
-                                <GraduationCap className="mx-auto mb-2" size={24} />
-                                <h3 className="font-bold mb-1">Education</h3>
-                                <p className="text-muted-foreground text-sm sm:text-base">
-                                    Attending B.SC in Software Engineering at AASTU (3rd Year)
+                            <div className="flex-1 p-6 border border-border/50 bg-card/50 backdrop-blur-sm rounded-2xl text-center transition-all duration-300 hover:scale-105 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10">
+                                <GraduationCap className="mx-auto mb-3 text-purple-500" size={28} />
+                                <h3 className="font-bold mb-1 text-lg">Education</h3>
+                                <p className="text-muted-foreground text-sm">
+                                    B.SC in Software Engineering<br />AASTU (3rd Year)
                                 </p>
                             </div>
                         </div>

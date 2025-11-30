@@ -13,8 +13,8 @@ export function ThemeToggle() {
             aria-label="Toggle theme"
             className="relative"
         >
-            <Sun className="w-12 h-12 text-black absolute transition-all duration-300 scale-100 dark:scale-0 dark:opacity-0" />
-            <Moon className="w-12 h-12 text-gray-200 absolute transition-all duration-300 scale-0 opacity-0 dark:scale-100 dark:opacity-100" />
+            <Sun className="w-14 h-14 text-black absolute transition-all duration-300 scale-100 dark:scale-0 dark:opacity-0" />
+            <Moon className="w-14 h-14 text-gray-200 absolute transition-all duration-300 scale-0 opacity-0 dark:scale-100 dark:opacity-100" />
         </Button>
     );
 }
