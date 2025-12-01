@@ -49,7 +49,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
     return (
         <div
             id="landing"
-            className="pt-2 bg-background h-auto min-h-screen flex flex-col justify-center"
+            className="pt-2 bg-transparent h-auto min-h-screen flex flex-col justify-center"
         >
             <NavBar currentSectionId={currentSectionId} setCurrentSectionId={setCurrentSectionId} />
             <motion.main

@@ -8,7 +8,7 @@ export default function Contact() {
     return (
         <motion.footer
             id="contact"
-            className="bg-background pb-10 sm:pb-16 mx-2 sm:mx-8 md:px-8 pt-44 sm:pt-52"
+            className="bg-transparent pb-10 sm:pb-16 mx-2 sm:mx-8 md:px-8 pt-44 sm:pt-52"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}

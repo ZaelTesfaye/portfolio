@@ -21,7 +21,7 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="bg-background pt-52"
+      className="bg-transparent pt-52"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
@@ -30,7 +30,7 @@ export default function Projects() {
       <div className="w-full flex flex-col gap-4 items-center px-4">
         <h1 className="text-2xl md:text-3xl font-bold text-center">Latest Projects</h1>
 
-        <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 px-2 md:px-6 pt-4">
+        <div className="max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-16 px-2 md:px-6 pt-4">
           {projects.map((project, index) => (
             <div
               key={index}

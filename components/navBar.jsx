@@ -25,7 +25,7 @@ const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => {} }) => {
 
     return (
         <header
-            className="flex flex-col sm:flex-row justify-between items-center w-full px-2 sm:px-16 sm:pl-8 md:pl-24 py-4 sm:py-8 z-10 fixed top-0 left-0 right-0 bg-background/80 backdrop-blur-md border-b border-border/40 shadow-sm transition-all duration-300">
+            className="flex flex-col sm:flex-row justify-between items-center w-full px-2 sm:px-16 sm:pl-8 md:pl-24 py-4 sm:py-7 z-10 fixed top-0 left-0 right-0 bg-transparent backdrop-blur-sm border-b border-border/40 shadow-lg transition-all duration-300">
             {/* Logo */}
             <div className="flex items-center gap-4 mb-2 sm:mb-0">
                 <Button variant={"ghost"} onClick={() => scrollToSection("landing")}

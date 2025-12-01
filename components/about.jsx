@@ -6,10 +6,25 @@ import { Award, GraduationCap, Code } from 'lucide-react';
 import profilePicture from '../assets/images/profile-pic.jpg';
 
 export default function AboutMe() {
+    const stats = [
+        {
+            icon: Award,
+            title: "Experience",
+            description: "1 year +\nin Web Development",
+            color: "blue"
+        },
+        {
+            icon: GraduationCap,
+            title: "Education",
+            description: "B.SC in Software Engineering\nAASTU (3rd Year)",
+            color: "blue"
+        }
+    ];
+
     return (
         <motion.section
             id="about"
-            className="bg-background px-4 md:px-8 mt-16 sm:mt-20"
+            className="bg-transparent px-4 md:px-8 mt-12 sm:mt-16"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -36,11 +51,11 @@ export default function AboutMe() {
                         >
                             {/* Background Glow/Blob */}
                             <div
-                                className="absolute inset-4 bg-gradient-to-tr from-blue-500/30 to-purple-500/30 rounded-full blur-3xl -z-10 transition-all duration-500 group-hover:bg-blue-500/40"
+                                className="absolute inset-4 bg-gradient-to-tr from-blue-500/30 to-blue-500/30 rounded-full blur-2xl -z-10"
                             />
 
                             {/* Main Image Card */}
-                            <div className="w-full h-full rounded-full border-[6px] border-background shadow-2xl overflow-hidden relative">
+                            <div className="w-full h-full rounded-full border-[6px] border-background shadow-sm hover:shadow-sm overflow-hidden relative transition-shadow duration-300">
                                 <Image
                                     src={profilePicture}
                                     alt="Zeal Tesfaye"
@@ -51,12 +66,12 @@ export default function AboutMe() {
                                     unoptimized
                                 />
                                 {/* Glass Shine */}
-                                <div className="absolute inset-0 bg-gradient-to-tr from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                                <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent opacity-0 group-hover:opacity-50 transition-opacity duration-500 pointer-events-none" />
                             </div>
 
                             {/* Floating Icons */}
                             <motion.div
-                                className="absolute -right-2 top-10 bg-card/90 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-border/50 flex items-center justify-center z-10"
+                                className="absolute -right-2 top-10 bg-card/90 backdrop-blur-md p-3 rounded-2xl  border border-border/50 flex items-center justify-center z-10"
                                 animate={{ y: [0, 10, 0], rotate: [0, 5, 0] }}
                                 transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
                             >
@@ -64,7 +79,7 @@ export default function AboutMe() {
                             </motion.div>
 
                             <motion.div
-                                className="absolute -left-4 bottom-20 bg-card/90 backdrop-blur-md p-3 rounded-2xl shadow-lg border border-border/50 flex items-center justify-center z-10"
+                                className="absolute -left-4 bottom-20 bg-card/90 backdrop-blur-md p-3 rounded-2xl  border border-border/50 flex items-center justify-center z-10"
                                 animate={{ y: [0, -10, 0], rotate: [0, -5, 0] }}
                                 transition={{ duration: 5, repeat: Infinity, delay: 1 }}
                             >
@@ -82,21 +97,16 @@ export default function AboutMe() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 w-full">
-                            {/* Experience */}
-                            <div className="flex-1 p-6 border border-border/50 bg-card/50 backdrop-blur-sm rounded-2xl text-center transition-all duration-300 hover:scale-105 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10">
-                                <Award className="mx-auto mb-3 text-blue-500" size={28} />
-                                <h3 className="font-bold mb-1 text-lg">Experience</h3>
-                                <p className="text-muted-foreground text-sm">1 year + <br />in Web Development</p>
-                            </div>
-
-                            {/* Education */}
-                            <div className="flex-1 p-6 border border-border/50 bg-card/50 backdrop-blur-sm rounded-2xl text-center transition-all duration-300 hover:scale-105 hover:border-purple-500/30 hover:shadow-lg hover:shadow-purple-500/10">
-                                <GraduationCap className="mx-auto mb-3 text-purple-500" size={28} />
-                                <h3 className="font-bold mb-1 text-lg">Education</h3>
-                                <p className="text-muted-foreground text-sm">
-                                    B.SC in Software Engineering<br />AASTU (3rd Year)
-                                </p>
-                            </div>
+                            {stats.map((stat, index) => (
+                                <div
+                                    key={index}
+                                    className={`flex-1 p-6 border border-border/50 bg-card/50 backdrop-blur-sm rounded-2xl text-center transition-all duration-150 hover:scale-105 hover:border-${stat.color}-500/30 hover:shadow-lg hover:shadow-${stat.color}-500/10`}
+                                >
+                                    <stat.icon className={`mx-auto mb-3 text-${stat.color}-500`} size={28} />
+                                    <h3 className="font-bold mb-1 text-lg">{stat.title}</h3>
+                                    <p className="text-muted-foreground text-sm whitespace-pre-line">{stat.description}</p>
+                                </div>
+                            ))}
                         </div>
                     </div>
                 </div>

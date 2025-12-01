@@ -1,10 +1,11 @@
 import React from 'react';
 import './globals.css'
 import { ThemeProvider } from "@/components/ThemeProvider";
+import GridBackground from "@/components/ui/GridBackground";
 
 const Layout = ({ children }) => {
     return (
-        <html>
+        <html suppressHydrationWarning>
             <head>
                 <link rel="icon" href="/favicon.png" />
             </head>
@@ -15,7 +16,8 @@ const Layout = ({ children }) => {
                     enableSystem
                     disableTransitionOnChange
                 >
-                    <div>
+                    <GridBackground />
+                    <div className="relative z-10">
                         {children}
                     </div>
                 </ThemeProvider>
