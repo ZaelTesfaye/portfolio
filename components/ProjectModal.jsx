@@ -52,7 +52,6 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                             exit="exit"
                             onClick={(e) => e.stopPropagation()}
                             className="w-[95%] md:w-[90%] max-w-4xl max-h-[90vh] bg-background rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-border"
-                            style={{ willChange: 'opacity, transform' }}
                         >
                             {/* Close Button */}
                             <button
@@ -63,7 +62,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                             </button>
 
                             {/* Scrollable Content */}
-                            <div className="overflow-y-auto flex-1">
+                            <div className="overflow-y-auto flex-1 overscroll-contain" style={{ transform: 'translateZ(0)' }}>
                                 {/* Hero Image */}
                                 <div className="relative w-full h-64 md:h-80 bg-muted">
                                     <Image
@@ -85,9 +84,17 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                     {/* About Section */}
                                     <div>
                                         <h3 className="text-xl font-semibold mb-3">About the Project</h3>
-                                        <p className="text-muted-foreground leading-relaxed">
-                                            {project.description}
-                                        </p>
+                                        <div className="space-y-3">
+                                            {Array.isArray(project.fullDescription) ? project.fullDescription.map((part, index) => (
+                                                <p key={index} className="text-muted-foreground leading-relaxed whitespace-pre-line">
+                                                    {part}
+                                                </p>
+                                            )) : (
+                                                <p className="text-muted-foreground leading-relaxed">
+                                                    {project.fullDescription || project.description || "No description available."}
+                                                </p>
+                                            )}
+                                        </div>
                                     </div>
 
                                     {/* Credentials if available */}

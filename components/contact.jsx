@@ -19,7 +19,7 @@ export default function Contact() {
                 <h2 className="text-xs sm:text-sm uppercase text-muted-foreground text-center mb-1 sm:mb-2">Get in Touch</h2>
                 <h1 className="text-2xl sm:text-4xl font-bold text-center mb-4 sm:mb-8">Contact Me</h1>
 
-                <div className="flex justify-center mt-16 mb-8 sm:mb-16">
+                <div className="flex justify-center mt-16 mb-8 sm:mb-16 ">
                     <div
                         className="bg-card text-card-foreground border border-border rounded-full py-2 sm:py-3 px-4 sm:px-12 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
                         <a

@@ -19,7 +19,12 @@ import cpp from '../assets/images/cpp.png';
 import java from '../assets/images/java.png';
 import javascript from '../assets/images/javascript.png';
 import git from '../assets/images/git.png';
+import aws from '../assets/images/aws.png';
+import terraform from '../assets/images/terraform.png';
+import ansible from '../assets/images/ansible.png';
+import kubernetest from '../assets/images/kubernetes.png';
 import docker from '../assets/images/docker.png';
+import actions from '../assets/images/actions.png';
 import azure from '../assets/images/azure.png';
 import firebase from "../assets/images/firebase.png"
 
@@ -47,12 +52,15 @@ const devSKills = {
       ],
     },
     {
-      title: 'Tools',
+      title: 'Devops',
       skills: [
-        { name: 'git', icon: git },
-        { name: 'Firebase', icon: firebase },
         { name: 'Docker', icon: docker },
-        { name: 'Azure', icon: azure },
+        { name: 'AWS', icon: aws },
+        { name: 'Github Actions', icon: actions },
+        { name: 'Kubernetes', icon: kubernetest },
+        // { name: 'Azure', icon: azure },
+        { name: 'Ansible', icon: ansible },
+        { name: 'Terraform', icon: terraform },
       ],
     },
   ],

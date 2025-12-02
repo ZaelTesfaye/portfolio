@@ -7,7 +7,7 @@ import { MapPin, Briefcase, Calendar } from 'lucide-react';
 
 const Experience = () => {
     return (
-        <section id="experience" className="pt-44 relative overflow-hidden">
+        <section id="experience" className="pt-44 py-6 relative overflow-hidden">
             <div className="container mx-auto px-4">
                 <motion.h1
                     className="text-3xl md:text-4xl font-bold text-center mb-16"
@@ -39,12 +39,12 @@ const Experience = () => {
                                 {/* Dot on the timeline */}
                                 <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background z-10 mt-6" />
 
+                                {/* Horizontal Branch Connector (Desktop only) */}
+                                <div className={`hidden md:block absolute top-8 h-0.5 bg-gray-300 dark:bg-border w-12 ${index % 2 === 0 ? 'left-[calc(50%-3rem)]' : 'left-[50%]'}`} />
+
                                 {/* Content Card */}
                                 <div className="w-full md:w-1/2 ml-12 md:ml-0">
-                                    <div className={`relative bg-card text-card-foreground p-6 rounded-2xl border border-gray-300 dark:border-border hover:shadow-lg transition-shadow duration-300 ${index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'}`}>
-
-                                        {/* Horizontal Branch Connector (Desktop only) */}
-                                        <div className={`hidden md:block absolute top-8 h-0.5 bg-gray-300 dark:bg-border w-12 ${index % 2 === 0 ? '-right-12' : '-left-12'}`} />
+                                    <div className={`relative bg-card text-card-foreground p-6 rounded-2xl border border-gray-300 dark:border-border hover:shadow-lg hover:scale-[1.015] hover:cursor-pointer transition-all duration-500 ${index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'}`}>
 
                                         {/* Date Badge */}
                                         <div className="inline-block px-3 py-1 mb-4 text-xs font-medium text-primary bg-primary/10 rounded-full border border-primary/20">
@@ -54,11 +54,22 @@ const Experience = () => {
                                         <h3 className="text-xl font-bold mb-1">{item.role}</h3>
 
                                         <div className="flex items-center gap-2 text-muted-foreground mb-4 text-sm">
+                                            {item?.company && 
+                                            <>
                                             <Briefcase className="w-4 h-4" />
                                             <span>{item.company}</span>
+                                            </>
+                                            }
+
+                                                       {item?.location && 
+                                            <>
+                     
                                             <span className="mx-1">•</span>
                                             <MapPin className="w-4 h-4" />
                                             <span>{item.location}</span>
+                                            </>
+                                            }
+
                                         </div>
 
                                         <ul className="space-y-2">

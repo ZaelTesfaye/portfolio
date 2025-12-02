@@ -10,13 +10,13 @@ export default function AboutMe() {
         {
             icon: Award,
             title: "Experience",
-            description: "1 year +\nin Web Development",
+            description: "1+ year in Web Development",
             color: "blue"
         },
         {
             icon: GraduationCap,
             title: "Education",
-            description: "B.SC in Software Engineering\nAASTU (3rd Year)",
+            description: "B.SC in Software Engineering",
             color: "blue"
         }
     ];
@@ -96,11 +96,11 @@ export default function AboutMe() {
                             Eager to contribute to existing & new projects with ability to work with minimal supervision.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row gap-4 w-full">
+                        <div className="flex flex-col  sm:flex-row gap-4 w-full">
                             {stats.map((stat, index) => (
                                 <div
                                     key={index}
-                                    className={`flex-1 p-6 border border-border/50 bg-card/50 backdrop-blur-sm rounded-2xl text-center transition-all duration-150 hover:scale-105 hover:border-${stat.color}-500/30 hover:shadow-lg hover:shadow-${stat.color}-500/10`}
+                                    className={`flex-1 mx-2 py-4 hover:cursor-pointer sp-6 border border-border/50 bg-card/50 backdrop-blur-sm rounded-2xl text-center transition-all duration-150 hover:scale-105 hover:border-${stat.color}-500/30 hover:shadow-lg hover:shadow-${stat.color}-500/10`}
                                 >
                                     <stat.icon className={`mx-auto mb-3 text-${stat.color}-500`} size={28} />
                                     <h3 className="font-bold mb-1 text-lg">{stat.title}</h3>

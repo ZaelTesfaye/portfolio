@@ -110,7 +110,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://github.com/ZaelTesfaye"
-                            className="text-muted-foreground hover:text-blue-80 transition-colors duration-300"
+                            className="text-muted-foreground hover:text-blue-800 transition-colors"
                         >
                             <Github size={22} />
                             <span className="sr-only">GitHub</span>
