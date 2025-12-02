@@ -31,7 +31,7 @@ import firebase from "../assets/images/firebase.png"
 const devSKills = {
   categories: [
     {
-      title: 'Frontend Technologies',
+      title: 'Frontend Development With',
       skills: [
         { name: 'React', icon: react },
         { name: 'Next.js', icon: nextJs },
@@ -41,7 +41,7 @@ const devSKills = {
       ],
     },
     {
-      title: 'Backend Technologies',
+      title: 'Backend Development With',
       skills: [
         { name: 'Node.js', icon: nodejs },
         { name: 'Express', icon: express },
@@ -52,7 +52,7 @@ const devSKills = {
       ],
     },
     {
-      title: 'Devops',
+      title: 'DevOps',
       skills: [
         { name: 'Docker', icon: docker },
         { name: 'AWS', icon: aws },
@@ -77,7 +77,7 @@ export default function Skills() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container mx-auto px-4">
-        <h1 className="text-2xl md:text-3xl font-bold text-center mb-8">
+        <h1 className="text-2xl md:text-3xl font-bold text-center mb-12 md:mb-16">
           Technical Skills
         </h1>
 

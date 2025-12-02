@@ -84,7 +84,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                href="https://drive.google.com/file/d/1XJZ69G-zfAU00KkhTs9mNnOv8oDTnV7l/view?usp=sharing"
+                                href="https://drive.google.com/file/d/1eSQdb_qEKOoShHf2ffAre5BeQKJGmCBx/view?usp=sharing"
                             >
                                 View CV
                             </a>

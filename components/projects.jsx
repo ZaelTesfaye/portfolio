@@ -28,7 +28,7 @@ export default function Projects() {
       viewport={{ once: true, amount: 0.2 }}
     >
       <div className="w-full flex flex-col gap-4 items-center px-4">
-        <h1 className="text-2xl md:text-3xl font-bold text-center">Latest Projects</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Latest Projects</h1>
 
         <div className="max-w-8xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-16 px-2 md:px-6 pt-4">
           {projects.map((project, index) => (

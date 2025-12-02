@@ -25,6 +25,7 @@ import aws from "../assets/images/aws.png";
 import docker from "../assets/images/docker.png";
 import postgres from "../assets/images/postgres.png";
 import actions from "../assets/images/actions.png";
+import socket from "../assets/images/socket-io.png";
 
 const projects = [
   {
@@ -82,7 +83,7 @@ const projects = [
   },
 
   {
-    title: "Task Flow Project Manager estate Marketplace",
+    title: "Task Flow Project Managerp",
     type: "site",
     image: taskFlowImage,
     url: "https://task-flow-lovat-seven.vercel.app/dashboard/",
@@ -162,6 +163,10 @@ const projects = [
       {
         name: "Express JS",
         icon: express,
+      },
+      {
+        name: "Socket-Io",
+        icon: socket,
       },
       {
         name: "MongoDB",

@@ -2,7 +2,7 @@ export const experience = [
   {
     id: 1,
     date: "December 2024 - june 2024 (Full Time)",
-    role: "Solo Dev",
+    role: "Solo Dev - DesoNames.xyz",
     description: [
       "Designed from scratch & built an advanced domain exchange platform on the Deso blockchain",
       "Deployed on AWS EC2, ensuring scalability and reliability",
