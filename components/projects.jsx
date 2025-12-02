@@ -21,7 +21,7 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="bg-transparent pt-52"
+      className="bg-transparent pt-44"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}

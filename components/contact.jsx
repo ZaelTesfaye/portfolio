@@ -3,12 +3,13 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Linkedin, Mail, Phone, Send } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 export default function Contact() {
     return (
         <motion.footer
             id="contact"
-            className="bg-transparent pb-10 sm:pb-16 mx-2 sm:mx-8 md:px-8 pt-44 sm:pt-52"
+            className="bg-transparent pb-10 sm:pb-16 mx-2 sm:mx-8 md:px-8 pt-44 sm:pt-36"
             initial={{ opacity: 0, y: 100 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -17,7 +18,8 @@ export default function Contact() {
             <div>
                 <h2 className="text-xs sm:text-sm uppercase text-muted-foreground text-center mb-1 sm:mb-2">Get in Touch</h2>
                 <h1 className="text-2xl sm:text-4xl font-bold text-center mb-4 sm:mb-8">Contact Me</h1>
-                <div className="flex justify-center mb-8 sm:mb-16">
+
+                <div className="flex justify-center mt-16 mb-8 sm:mb-16">
                     <div
                         className="bg-card text-card-foreground border border-border rounded-full py-2 sm:py-3 px-4 sm:px-12 flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4">
                         <a
@@ -69,6 +71,8 @@ export default function Contact() {
                         </a>
                     </div>
                 </div>
+                <ContactForm />
+
             </div>
         </motion.footer>
     );

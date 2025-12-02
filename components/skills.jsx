@@ -70,7 +70,7 @@ export default function Skills() {
     >
       <div className="container mx-auto px-4">
         <h1 className="text-2xl md:text-3xl font-bold text-center mb-8">
-          Skills
+          Technical Skills
         </h1>
 
         <div className="lg:ml-20 grid grid-cols-1 lg:grid-cols-3 gap-6 pt-4">
@@ -78,11 +78,10 @@ export default function Skills() {
             <div
               key={index}
               // className="px-2"
-              className={`hover:cursor-pointer ${
-                  index === 0 ? 'lg:-ml-20' :
+              className={`hover:cursor-pointer ${index === 0 ? 'lg:-ml-20' :
                   index === 1 ? 'lg:-ml-20 lg:mt-10' : ''
-              } ${index === 2 ? 'lg:-ml-20 lg:mr-10 lg:mt-20' : ''}`}
-            
+                } ${index === 2 ? 'lg:-ml-20 lg:mr-10 lg:mt-20' : ''}`}
+
             >
               <div
                 className="min-w-96 bg-card text-card-foreground rounded-3xl p-4 md:p-6 flex flex-col border-2 border-border hover:scale-[1.02] transition-transform transform duration-300"

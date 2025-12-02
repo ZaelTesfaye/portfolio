@@ -3,9 +3,9 @@ import { useRouter } from 'next/navigation';
 import { Button } from "./ui/button";
 import { ThemeToggle } from "./ThemeToggle";
 
-const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => {} }) => {
+const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => { } }) => {
     const router = useRouter();
-    const sections = ["landing", "about", "skills", "projects", "contact"];
+    const sections = ["landing", "about", "skills", "experience", "projects", "contact"];
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -45,6 +45,12 @@ const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => {} }) => {
                         <button onClick={() => scrollToSection('skills')}
                             className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
                             Skills
+                        </button>
+                    </li>
+                    <li>
+                        <button onClick={() => scrollToSection('experience')}
+                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
+                            Experience
                         </button>
                     </li>
                     <li>
