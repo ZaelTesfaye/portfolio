@@ -7,7 +7,7 @@ import { Button } from './ui/button.tsx';
 import { ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
 import { projects } from '../constants';
-import { ProjectModal } from './';
+import ProjectModal from './ProjectModal.jsx';
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);

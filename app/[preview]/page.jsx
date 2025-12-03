@@ -7,7 +7,7 @@ import {useState} from 'react';
 import { projects } from "../../constants";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../components/ui/carousel.tsx";
 import { Button } from "../../components/ui/button.tsx";
-import NavBar from "../../components/navBar.jsx";
+import NavBar from "../../components/NavBar.jsx";
 
 const Page = () => {
     const [isModalOpen, setModalOpen] = useState(false);

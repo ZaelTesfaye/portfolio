@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Linkedin, Mail, Phone, Send } from 'lucide-react';
-import { ContactForm } from './';
+import ContactForm from './ContactForm.jsx';
 
 export default function Contact() {
     return (

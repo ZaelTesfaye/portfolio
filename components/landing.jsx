@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { Github, Linkedin } from 'lucide-react';
 import { profilePicture } from '../assets/images';
 import { Button } from './ui';
-import NavBar from "./navBar.jsx";
+import NavBar from "./NavBar.jsx";
 
 export default function Landing({ currentSectionId, setCurrentSectionId }) {
     const sections = ['landing', 'about', 'skills', 'projects', 'contact'];

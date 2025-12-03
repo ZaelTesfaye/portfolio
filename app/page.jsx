@@ -3,7 +3,7 @@
 export const dynamic = 'force-dynamic';
 
 import React, { useEffect, useRef, useState } from 'react';
-import Landing from "../components/landing.jsx";
+import Landing from "../components/Landing.jsx";
 import About from "../components/About.jsx";
 import Skills from "../components/Skills.jsx";
 import Experience from "../components/Experience.jsx";
