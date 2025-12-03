@@ -67,9 +67,10 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                         src={profilePicture}
                         alt="Zeal Tesfaye"
                         fill={true}
+                        priority
+                        placeholder="blur"
                         style={{ objectFit: 'cover', objectPosition: 'top center' }}
                         className="rounded-full"
-                        unoptimized
                     />
                 </motion.div>
                 <motion.div
