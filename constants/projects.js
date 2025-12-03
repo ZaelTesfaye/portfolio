@@ -1,31 +1,35 @@
-import ProjectImage1 from "../assets/images/project2.png";
-import nextJs from "../assets/images/nextjs-icon.png";
-import supabase from "../assets/images/Supabase.png";
-import tailwind from "../assets/images/Tailwind.png";
-import ProjectImage2 from "../assets/images/project1.png";
-import react from "../assets/images/react.png";
-import nodejs from "../assets/images/node.png";
-import desoDomains from "../assets/images/desoDomains.png";
-import express from "../assets/images/express.png";
-import mongodb from "../assets/images/MongoDB.png";
-import ProjectImage3 from "../assets/images/project3.png";
-import reactNative from "../assets/images/reactnative.png";
-import firebase from "../assets/images/firebase.png";
-import businessDirectIcon from "../assets/images/businessDirectIcon.png";
-import bdImage1 from "../assets/images/bdImage1.png";
-import bdImage2 from "../assets/images/bdImage2.png";
-import bdImage3 from "../assets/images/bdImage3.png";
-import bdImage4 from "../assets/images/bdImage4.png";
-import bdImage5 from "../assets/images/bdImage5.png";
-import taskFlowImage from "../assets/images/task-flow.png";
-import redis from "../assets/images/redis.png";
-import bullMq from "../assets/images/bullMq.ico";
-import nginx from "../assets/images/nginx.svg";
-import aws from "../assets/images/aws.png";
-import docker from "../assets/images/docker.png";
-import postgres from "../assets/images/postgres.png";
-import actions from "../assets/images/actions.png";
-import socket from "../assets/images/socket-io.png";
+import {
+  nextjsIcon as nextJs,
+  Supabase as supabase,
+  Tailwind as tailwind,
+  react,
+  node as nodejs,
+  express,
+  MongoDB as mongodb,
+  reactnative as reactNative,
+  firebase,
+  redis,
+  bullMq,
+  nginx,
+  aws,
+  docker,
+  postgres,
+  actions,
+  socketIo as socket,
+} from "../assets/icons";
+import {
+  realestateMarket as ProjectImage1,
+  snappyChatImg as ProjectImage2,
+  desoDomains,
+  BusinessDirectoryImg,
+  businessDirectIcon,
+  bdImage1,
+  bdImage2,
+  bdImage3,
+  bdImage4,
+  bdImage5,
+  taskFlow,
+} from "../assets/images";
 
 const projects = [
   {
@@ -85,7 +89,7 @@ const projects = [
   {
     title: "Task Flow Project Managerp",
     type: "site",
-    image: taskFlowImage,
+    image: taskFlow,
     url: "https://task-flow-lovat-seven.vercel.app/dashboard/",
     gitRepo: "https://github.com/ZaelTesfaye/Task-Flow",
     alt: "Task Flow Project Manager app",
@@ -214,7 +218,7 @@ const projects = [
     title: "Business Directory",
 
     type: "app",
-    image: ProjectImage3,
+    image: BusinessDirectoryImg,
     url: "https://drive.google.com/file/d/1DBFsw5GAQP-AUv0FvwvgTyaiocXH01iv/view?usp=sharing",
     gitRepo: "https://github.com/ZaelTesfaye/Business-Directory",
     alt: "Business Directory app",

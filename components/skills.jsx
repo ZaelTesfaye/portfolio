@@ -3,35 +3,12 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import nodejs from '../assets/images/node.png';
-import typescript from '../assets/images/typescript.png';
-import react from '../assets/images/react.png';
-import reactNative from '../assets/images/reactnative.png';
-import nextJs from '../assets/images/nextjs-icon.png';
-import mongodb from '../assets/images/MongoDB.png';
-import firebaseIcon from '../assets/images/firebase.png';
-import postgres from '../assets/images/postgres.png';
-import supabase from '../assets/images/Supabase.png';
-import express from '../assets/images/express.png';
-import mySql from '../assets/images/mysql.png';
-import tailwind from '../assets/images/Tailwind.png';
-import cpp from '../assets/images/cpp.png';
-import java from '../assets/images/java.png';
-import javascript from '../assets/images/javascript.png';
-import git from '../assets/images/git.png';
-import aws from '../assets/images/aws.png';
-import terraform from '../assets/images/terraform.png';
-import ansible from '../assets/images/ansible.png';
-import kubernetest from '../assets/images/kubernetes.png';
-import docker from '../assets/images/docker.png';
-import actions from '../assets/images/actions.png';
-import azure from '../assets/images/azure.png';
-import firebase from "../assets/images/firebase.png"
+import { node as nodejs, typescript, react, reactnative as reactNative, nextjsIcon as nextJs, MongoDB as mongodb, firebase, postgres, Supabase as supabase, express, mysql as mySql, Tailwind as tailwind, cpp, java, javascript, git, aws, terraform, ansible, kubernetes as kubernetest, docker, actions, azure } from '../assets/icons';
 
 const devSKills = {
   categories: [
     {
-      title: 'Frontend Development With',
+      title: 'Frontend Dev\'t With',
       skills: [
         { name: 'React', icon: react },
         { name: 'Next.js', icon: nextJs },
@@ -41,13 +18,13 @@ const devSKills = {
       ],
     },
     {
-      title: 'Backend Development With',
+      title: 'Backend Dev\'t With',
       skills: [
         { name: 'Node.js', icon: nodejs },
         { name: 'Express', icon: express },
         { name: 'MongoDB', icon: mongodb },
         { name: 'MySQL', icon: mySql },
-        { name: 'Firebase', icon: firebaseIcon },
+        { name: 'Firebase', icon: firebase },
         { name: 'Postgres', icon: postgres },
       ],
     },
@@ -76,7 +53,7 @@ export default function Skills() {
       transition={{ duration: 0.8, ease: 'easeOut' }}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-1">
         <h1 className="text-2xl md:text-3xl font-bold text-center mb-12 md:mb-16">
           Technical Skills
         </h1>

@@ -1,12 +1,16 @@
 'use client';
 
+export const dynamic = 'force-dynamic';
+
 import React, { useEffect, useRef, useState } from 'react';
-import Landing from "../components/landing";
-import AboutMe from "../components/about";
-import Skills from "../components/skills";
-import Experience from "../components/experience";
-import Projects from "../components/projects";
-import Contact from "../components/contact";
+import Landing from "../components/landing.jsx";
+import About from "../components/About.jsx";
+import Skills from "../components/Skills.jsx";
+import Experience from "../components/Experience.jsx";
+import Projects from "../components/Projects.jsx";
+import Contact from "../components/Contact.jsx";
+
+const AboutMe = About;
 
 const Page = () => {
     const [currentSectionId, setCurrentSectionId] = useState(0);

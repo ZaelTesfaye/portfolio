@@ -1,7 +1,7 @@
 import React from 'react';
 import './globals.css'
-import { ThemeProvider } from "@/components/ThemeProvider";
-import GridBackground from "@/components/ui/GridBackground";
+import { ThemeProvider } from "../components/ThemeProvider.jsx";
+import GridBackground from "../components/ui/GridBackground.jsx";
 
 const Layout = ({ children }) => {
     return (

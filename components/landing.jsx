@@ -1,11 +1,11 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Button } from './ui/button';
+import { motion } from 'framer-motion';
 import { Github, Linkedin } from 'lucide-react';
-import profilePicture from '../assets/images/profile-pic.jpg';
-import NavBar from './navBar';
+import { profilePicture } from '../assets/images';
+import { Button } from './ui';
+import NavBar from "./navBar.jsx";
 
 export default function Landing({ currentSectionId, setCurrentSectionId }) {
     const sections = ['landing', 'about', 'skills', 'projects', 'contact'];

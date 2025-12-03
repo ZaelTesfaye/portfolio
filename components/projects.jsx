@@ -3,11 +3,11 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Button } from '@/components/ui/button';
+import { Button } from './ui/button.tsx';
 import { ArrowRight } from 'lucide-react';
 import React, { useState } from 'react';
-import projects from '../constants/projects';
-import ProjectModal from './ProjectModal';
+import { projects } from '../constants';
+import { ProjectModal } from './';
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState(null);

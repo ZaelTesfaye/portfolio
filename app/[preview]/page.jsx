@@ -1,12 +1,13 @@
 'use client'
-import React, {useState} from 'react';
-import projects from "../../constants/projects";
-import {usePathname} from "next/navigation";
 import Image from "next/image";
-import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious} from "../../components/ui/carousel";
-import {Button} from "../../components/ui/button";
 import Link from "next/link";
-import NavBar from "../../components/navBar";
+import {usePathname} from "next/navigation";
+import {useState} from 'react';
+
+import { projects } from "../../constants";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../components/ui/carousel.tsx";
+import { Button } from "../../components/ui/button.tsx";
+import NavBar from "../../components/navBar.jsx";
 
 const Page = () => {
     const [isModalOpen, setModalOpen] = useState(false);

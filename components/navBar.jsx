@@ -1,11 +1,19 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
-import { Button } from "./ui/button";
-import { ThemeToggle } from "./ThemeToggle";
+import { Button } from "./ui/button.tsx";
+import { ThemeToggle } from "./ThemeToggle.jsx";
 
 const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => { } }) => {
     const router = useRouter();
     const sections = ["landing", "about", "skills", "experience", "projects", "contact"];
+
+    const navItems = [
+        { name: 'About', id: 'about' },
+        { name: 'Skills', id: 'skills' },
+        { name: 'Experience', id: 'experience' },
+        { name: 'Projects', id: 'projects' },
+        { name: 'Contact', id: 'contact' },
+    ];
 
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -34,39 +42,15 @@ const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => { } }) => {
             </div>
             <nav className="flex items-center gap-5">
                 <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-6 md:space-x-8 items-center">
-                    <li>
-                        <button
-                            onClick={() => scrollToSection('about')}
-                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
-                            About
-                        </button>
-                    </li>
-                    <li>
-                        <button onClick={() => scrollToSection('skills')}
-                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
-                            Skills
-                        </button>
-                    </li>
-                    <li>
-                        <button onClick={() => scrollToSection('experience')}
-                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
-                            Experience
-                        </button>
-                    </li>
-                    <li>
-                        <button
-                            onClick={() => scrollToSection('projects')}
-                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
-                            Projects
-                        </button>
-                    </li>
-                    <li>
-                        <button
-                            onClick={() => scrollToSection('contact')}
-                            className="hover:text-primary font-medium text-[15px] sm:text-[17px] transition-colors">
-                            Contact
-                        </button>
-                    </li>
+                    {navItems.map((item) => (
+                        <li key={item.id}>
+                            <button
+                                onClick={() => scrollToSection(item.id)}
+                                className="hover:text-primary font-medium text-[14px] sm:text-[16px] transition-colors">
+                                {item.name}
+                            </button>
+                        </li>
+                    ))}
                 </ul>
                 <div className="flex items-center">
                     <ThemeToggle />

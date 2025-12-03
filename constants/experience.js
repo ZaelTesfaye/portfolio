@@ -1,4 +1,4 @@
-export const experience = [
+const experience = [
   {
     id: 1,
     date: "December 2024 - june 2024 (Full Time)",
@@ -21,3 +21,5 @@ export const experience = [
     ],
   },
 ];
+
+export default experience;

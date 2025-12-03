@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Award, GraduationCap, Code } from 'lucide-react';
-import profilePicture from '../assets/images/profile-pic.jpg';
+import { profilePicture } from '../assets/images';
 
 export default function AboutMe() {
     const stats = [
@@ -31,7 +31,7 @@ export default function AboutMe() {
             viewport={{ once: true, amount: 0.2 }}
         >
             <div className="max-w-6xl mx-auto">
-                <h1 className="text-3xl md:text-4xl font-bold text-center mb-12 md:mb-16">
+                <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">
                     About Me
                 </h1>
 
