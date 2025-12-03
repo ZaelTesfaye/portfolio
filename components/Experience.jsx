@@ -44,7 +44,7 @@ const Experience = () => {
 
                                 {/* Content Card */}
                                 <div className="w-full md:w-1/2 ml-12 md:ml-0">
-                                    <div className={`relative bg-card text-card-foreground p-6 rounded-2xl border border-gray-300 dark:border-border hover:shadow-lg hover:scale-105 hover:cursor-pointer transition-all duration-300 ease-in-out transform-gpu ${index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'}`}>
+                                    <div className={`relative bg-card text-card-foreground p-6 rounded-2xl border border-gray-300 dark:border-border hover:shadow-lg hover:scale-[1.015] hover:cursor-pointer transition-all duration-500 ease-in-out transform-gpu ${index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'}`}>
 
                                         {/* Date Badge */}
                                         <div className="inline-block px-3 py-1 mb-4 text-xs font-medium text-primary bg-primary/10 rounded-full border border-primary/20">
