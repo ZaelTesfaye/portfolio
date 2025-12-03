@@ -59,10 +59,9 @@ export default function AboutMe() {
                                 <Image
                                     src={profilePicture}
                                     alt="Zeal Tesfaye"
-                                    layout="fill"
-                                    objectFit="cover"
+                                    fill={true}
+                                    style={{ objectFit: 'cover', objectPosition: 'top center' }}
                                     className="grayscale group-hover:grayscale-0 transition-all duration-500 scale-105"
-                                    objectPosition="top center"
                                     unoptimized
                                 />
                                 {/* Glass Shine */}

@@ -46,8 +46,8 @@ export default function Projects() {
                   <Image
                     src={project.image}
                     alt={project.alt}
-                    layout="fill"
-                    objectFit="cover"
+                    fill={true}
+                    style={{ objectFit: 'cover' }}
                     className="transition-transform duration-500 "
                   />
                 </div>

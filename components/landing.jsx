@@ -66,10 +66,9 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                     <Image
                         src={profilePicture}
                         alt="Zeal Tesfaye"
-                        layout="fill"
-                        objectFit="cover"
+                        fill={true}
+                        style={{ objectFit: 'cover', objectPosition: 'top center' }}
                         className="rounded-full"
-                        objectPosition="top center"
                         unoptimized
                     />
                 </motion.div>

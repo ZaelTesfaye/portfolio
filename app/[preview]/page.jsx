@@ -111,7 +111,6 @@ const Page = () => {
                             <Image
                                 src={previewItemDetails.preview?.previewImages[currentIndex]}
                                 alt="Selected Image"
-                                layout="intrinsic"
                                 width={250}
                                 height={500}
                                 className="rounded-lg py-1 object-contain max-h-[80vh] max-w-[90vw] sm:max-h-screen sm:max-w-screen"
