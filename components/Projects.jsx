@@ -35,10 +35,10 @@ export default function Projects() {
             
             <div
               key={index}
-              className="px-2 transform transition-transform duration-500"
+              className="px-2 transform transition-transform duration-300"
             >
               <div
-                className="min-w-full sm:min-w-64 bg-card text-card-foreground rounded-3xl p-4 md:p-6 flex flex-col border-2 border-border hover:scale-[1.02] hover:cursor-pointer transition-transform duration-300 shadow-sm hover:shadow-md"
+                className="min-w-full sm:min-w-64 bg-card text-card-foreground rounded-3xl p-4 md:p-6 flex flex-col border-2 border-border hover:scale-[1.02] hover:cursor-pointer transition-transform duration-500 shadow-sm hover:shadow-md"
                 style={{ height: '650px' }}
                 onClick={() => handleProjectClick(project)}
               >

@@ -88,8 +88,8 @@ export default function AboutMe() {
                     </div>
 
                     {/* Text Content */}
-                    <div className="md:w-1/2 flex flex-col items-center text-center md:items-start md:text-left">
-                        <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-8">
+                    <div className="md:w-1/2 flex gap-12 flex-col items-center text-center md:items-start md:text-left">
+                        <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed ">
                             Full Stack developer with hands-on experience in building web applications and backend systems.
                             Specialized skills on React, Next JS, Node.js/Express, SQL & NoSQL databases and DevOps tools & practices. High commitment to learning.
                             Open to contribute to existing & new projects. Able to work with minimal supervision.
