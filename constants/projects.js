@@ -35,9 +35,10 @@ const projects = [
   {
     title: "Deso Domains Auction",
     type: "site",
-    url: "https://name-swap.vercel.app",
+    url: "https://desonames.xyz",
     image: desoDomains,
     alt: "Deso Domain Auction",
+    topLink: true,
     fullDescription: [
       "Designed & Built from scratch an advanced domain auction platform on the deso blockchain that allows exchanging of domains names through instant transfers or an extensible auction.",
       "Domains are the most valuable assets on the blockchain, serving as a shorter representation for wallet addresses, a username for Deso based social medias and a ticker for Deso based tokens, yet had no way for exchanging them.",
@@ -93,6 +94,7 @@ const projects = [
     url: "https://task-flows.tech",
     gitRepo: "https://github.com/ZaelTesfaye/Task-Flow",
     alt: "Task Flow Project Manager app",
+    topLink: true,
     description:
       "A project management app that helps teams assign & manage tasks and collaborate on projects effectively.",
     fullDescription: [
@@ -149,6 +151,7 @@ const projects = [
     url: "https://chat-on-snappy.netlify.app/login",
     gitRepo: "https://github.com/ZaelTesfaye/Chat-App",
     alt: "Chat application",
+    topLink: true,
     description:
       "A chat app that uses web socket connection to enable real time chat among users.",
     fullDescription: [
@@ -190,6 +193,7 @@ const projects = [
     url: "https://next-market-placell.vercel.app/",
     gitRepo: "https://github.com/ZaelTesfaye/Next-Market-place",
     alt: "Real estate Marketplace app",
+    topLink: true,
     description:
       "Real-estate market platform that allows users to post, edit and access properties for sell and rent in one place.",
     fullDescription: [
@@ -223,6 +227,7 @@ const projects = [
     url: "https://drive.google.com/file/d/1DBFsw5GAQP-AUv0FvwvgTyaiocXH01iv/view?usp=sharing",
     gitRepo: "https://github.com/ZaelTesfaye/Business-Directory",
     alt: "Business Directory app",
+    topLink: false,
     description:
       "A cross platform mobile app that serves as one place to access details & rating of local businesses and for business owners to promote their businesses.",
     fullDescription: [

@@ -80,7 +80,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                     <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">Zeal Tesfaye</h2>
                     <p className="text-lg sm:text-2xl md:text-3xl text-muted-foreground">Full-stack Developer</p>
                     <div className="flex justify-center md:justify-start space-x-2 sm:space-x-4">
-                        <Button className="hover:scale-110 text-xs sm:text-base transition-transform duration-300" variant="outline">
+                        <Button className="hover:scale-110 text-xs sm:text-base transition-transform duration-500" variant="outline">
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -90,7 +90,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                             </a>
                         </Button>
                         <Button
-                            className="hover:scale-105 text-xs sm:text-base transition-transform duration-300"
+                            className="hover:scale-105 text-xs sm:text-base transition-transform duration-500"
                             onClick={() => scrollToSection('contact')}
                         >
                             Contact
@@ -101,7 +101,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://www.linkedin.com/in/ZealTesfaye/"
-                            className="text-muted-foreground hover:text-[#24a9eb] transition-transform duration-300"
+                            className="text-muted-foreground hover:text-[#24a9eb] transition-all duration-300"
                         >
                             <Linkedin size={22} />
                             <span className="sr-only">LinkedIn</span>
@@ -110,7 +110,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                             target="_blank"
                             rel="noopener noreferrer"
                             href="https://github.com/ZaelTesfaye"
-                            className="text-muted-foreground hover:text-blue-800 transition-colors"
+                            className="text-muted-foreground hover:text-blue-800 transition-all duration-300"
                         >
                             <Github size={22} />
                             <span className="sr-only">GitHub</span>

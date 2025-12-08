@@ -76,7 +76,7 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                         <h2 className="text-3xl text-white md:text-4xl font-bold">
                                             {project.title}
                                         </h2>
-                                        {project.url && (
+                                        {project.url && project.topLink && (
                                             <Button asChild size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm">
                                                 <a
                                                     href={project.url}
