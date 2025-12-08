@@ -50,7 +50,7 @@ export default function Contact() {
                         <a
                             target="_blank"
                             rel="noopener noreferrer"
-                            href="https://t.me/zealtesfaye"
+                            href="https://t.me/zaeltesfaye"
                             className="hover:scale-105 flex items-center text-base sm:text-lg space-x-2 transition-transform duration-500"
                         >
                             <Send size={24} className="sm:w-[30px] sm:h-[30px]" color="#24a9eb" />

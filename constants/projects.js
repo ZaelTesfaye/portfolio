@@ -88,7 +88,7 @@ const projects = [
   },
 
   {
-    title: "Task Flow Project Managerp",
+    title: "Task Flow Project Manager",
     type: "site",
     image: taskFlow,
     url: "https://task-flows.tech",
@@ -227,7 +227,7 @@ const projects = [
     url: "https://drive.google.com/file/d/1DBFsw5GAQP-AUv0FvwvgTyaiocXH01iv/view?usp=sharing",
     gitRepo: "https://github.com/ZaelTesfaye/Business-Directory",
     alt: "Business Directory app",
-    topLink: false,
+    topLink: true,
     description:
       "A cross platform mobile app that serves as one place to access details & rating of local businesses and for business owners to promote their businesses.",
     fullDescription: [

@@ -76,17 +76,28 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                         <h2 className="text-3xl text-white md:text-4xl font-bold">
                                             {project.title}
                                         </h2>
-                                        {project.url && project.topLink && (
-                                            <Button asChild size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm">
-                                                <a
-                                                    href={project.url}
-                                                    target="_blank"
-                                                    rel="noopener noreferrer"
-                                                    className="flex items-center gap-2"
-                                                >
-                                                    Visit <ExternalLink size={16} />
-                                                </a>
-                                            </Button>
+                                        {project.topLink && (
+                                            project.type === 'app' && project.preview?.previewPath ? (
+                                                <Button asChild size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm">
+                                                    <Link
+                                                        href={`/${project.preview.previewPath}`}
+                                                        className="flex items-center gap-2"
+                                                    >
+                                                        Preview <ExternalLink size={16} />
+                                                    </Link>
+                                                </Button>
+                                            ) : project.type === 'site' && project.url ? (
+                                                <Button asChild size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm">
+                                                    <a
+                                                        href={project.url}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className="flex items-center gap-2"
+                                                    >
+                                                        Visit <ExternalLink size={16} />
+                                                    </a>
+                                                </Button>
+                                            ) : null
                                         )}
                                     </div>
                                 </div>
