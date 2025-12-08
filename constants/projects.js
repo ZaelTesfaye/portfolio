@@ -98,10 +98,10 @@ const projects = [
     description:
       "A project management app that helps teams assign & manage tasks and collaborate on projects effectively.",
     fullDescription: [
-      "A project management web app that helps teams assign & manage tasks and collaborate on projects effectively.",
-      "The project has 3 main sections, Admin, Client & Backend API all containerized & hosted on a single AWS EC2 instance with nginx infrontof them.",
-      "Admin Site built with vite/react, User Site built with nextJs & Backend API with Express JS with role based access (User, Admin, & Super-Admin) all built with industry standard practices.",
-      "Containerized with docker and Depoyed to AWS EC2 with nginx infront of it for load balancing and reverse proxy with github actions for CI/CD.",
+      "Production ready project management web app  that helps teams assign & manage tasks and collaborate on projects effectively.",
+      "The project is built with industry standards for both development and deployment with 3 main sections, Admin frontend, Client frontend & Backend API all containerized & hosted on a single AWS EC2 instance with nginx infront of them.",
+      "The Admin Frontend built with vite/react, User Frontend built with nextJs & Backend API with Express JS with role based access (User, Admin, & Super-Admin)",
+      "Containerized with docker and Depoyed to AWS EC2 with nginx infront of it for load balancing and reverse proxy & github actions for CI/CD.",
       "The user site leverages Next.js, with Tailwind CSS for responsive design, Zustand for lightweight state management",
       "The backend API, built with Express.js, incorporates Prisma ORM for type-safe database interactions with PostgreSQL, JWT-based authentication , CORS handling, and structured routes Role-based access control ensures secure endpoint, with validation schemas using Joi",
     ],
