@@ -72,10 +72,22 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                         className="object-cover"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                                    <div className="absolute bottom-0 left-0 p-6 md:p-8">
+                                    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 flex items-end justify-between">
                                         <h2 className="text-3xl text-white md:text-4xl font-bold">
                                             {project.title}
                                         </h2>
+                                        {project.url && (
+                                            <Button asChild size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm">
+                                                <a
+                                                    href={project.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="flex items-center gap-2"
+                                                >
+                                                    Visit <ExternalLink size={16} />
+                                                </a>
+                                            </Button>
+                                        )}
                                     </div>
                                 </div>
 
