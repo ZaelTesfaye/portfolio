@@ -49,7 +49,7 @@ export default function AboutMe() {
                             }}
                             className="w-full h-full relative"
                         >
-                            {/* Background Glow/Blob */}
+                            {/* Background Glow */}
                             <div
                                 className="absolute inset-4 bg-gradient-to-tr from-blue-500/30 to-blue-500/30 rounded-full blur-2xl -z-10"
                             />
