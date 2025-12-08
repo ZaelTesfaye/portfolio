@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { X, Github, ExternalLink, Copy } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from './ui/button.tsx';
-import Link from 'next/link';
 
 const backdropVariants = {
     hidden: { opacity: 0 },
@@ -79,12 +78,14 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                         {project.topLink && (
                                             project.type === 'app' && project.preview?.previewPath ? (
                                                 <Button asChild size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm">
-                                                    <Link
+                                                    <a
                                                         href={`/${project.preview.previewPath}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
                                                         className="flex items-center gap-2"
                                                     >
                                                         Preview <ExternalLink size={16} />
-                                                    </Link>
+                                                    </a>
                                                 </Button>
                                             ) : project.type === 'site' && project.url ? (
                                                 <Button asChild size="sm" className="bg-white/20 hover:bg-white/30 text-white border-white/30 hover:border-white/50 backdrop-blur-sm">
@@ -210,12 +211,14 @@ export default function ProjectModal({ project, isOpen, onClose }) {
                                             </Button>
                                         ) : (
                                             <Button asChild className="flex-1 h-12 text-base">
-                                                <Link
-                                                    href={project.preview?.previewPath || '#'}
+                                                <a
+                                                    href={project.preview?.previewPath ? `/${project.preview.previewPath}` : '#'}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
                                                     className="flex items-center justify-center gap-2"
                                                 >
                                                     App Preview <ExternalLink size={18} />
-                                                </Link>
+                                                </a>
                                             </Button>
                                         )}
 
