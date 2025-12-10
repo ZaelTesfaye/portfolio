@@ -3,10 +3,12 @@ import './globals.css'
 import { ThemeProvider } from "../components/ThemeProvider.jsx";
 import GridBackground from "../components/ui/GridBackground.jsx";
 
+const description = 'Full-stack developer with specialized skills in modern web technologies. Building scalable applications with clean code and innovative solutions.'
+const title = "Zeal Tesfaye - Full-Stack Dev";
+const metaTitle = "Zeal Tesfaye - Full-Stack Dev";
 export const metadata = {
-    title: 'Zeal Tesfaye - Full-Stack Developer',
-    description: 'Passionate full-stack developer specializing in React, Node.js, and modern web technologies. Building scalable applications with clean code and innovative solutions.',
-    keywords: ['Full-Stack Developer', 'React', 'Node.js', 'JavaScript', 'TypeScript', 'Web Development', 'Portfolio'],
+    title: title,
+    description: description,
     authors: [{ name: 'Zeal Tesfaye' }],
     creator: 'Zeal Tesfaye',
     publisher: 'Zeal Tesfaye',
@@ -15,18 +17,18 @@ export const metadata = {
         address: false,
         telephone: false,
     },
-    metadataBase: new URL('https://your-portfolio-domain.com'), // Replace with your actual domain
+    metadataBase: new URL('https://zealtesfaye.dev'), 
     alternates: {
         canonical: '/',
     },
     openGraph: {
-        title: 'Zeal Tesfaye - Full-Stack Developer',
-        description: 'Passionate full-stack developer creating innovative web solutions with React, Node.js, and modern technologies.',
-        url: 'https://your-portfolio-domain.com', // Replace with your actual domain
-        siteName: 'Zeal Tesfaye Portfolio',
+        title: title,
+        description: description,
+        url: 'https://zealtesfaye.dev', 
+        siteName: metaTitle,
         images: [
             {
-                url: '/profile-pic.jpg', // Using profile picture - consider creating a dedicated 1200x630 OG image
+                url: './public/favicon.png', 
                 width: 1200,
                 height: 630,
                 alt: 'Zeal Tesfaye - Full-Stack Developer',
@@ -37,10 +39,10 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Zeal Tesfaye - Full-Stack Developer',
-        description: 'Passionate full-stack developer creating innovative web solutions with React, Node.js, and modern technologies.',
-        creator: '@your-twitter-handle', // Replace with your Twitter handle
-        images: ['/profile-pic.jpg'], // Same image as Open Graph
+        title: metaTitle,
+        description: description,
+        creator: '@zeal-tesfaye', 
+        images: ['./public/favicon.png'], 
     },
     robots: {
         index: true,
