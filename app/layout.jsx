@@ -3,7 +3,7 @@ import './globals.css'
 import { ThemeProvider } from "../components/ThemeProvider.jsx";
 import GridBackground from "../components/ui/GridBackground.jsx";
 
-const description = 'Full-stack developer with specialized skills in modern web technologies. Building scalable applications with clean code and innovative solutions.'
+const description = 'Full Stack developer with hands-on experience in building web applications and backend systems. Building scalable applications with clean code and innovative solutions.'
 const title = "Zeal Tesfaye - Full-Stack Dev";
 const metaTitle = "Zeal Tesfaye - Full-Stack Dev";
 export const metadata = {
