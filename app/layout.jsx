@@ -28,7 +28,7 @@ export const metadata = {
         siteName: metaTitle,
         images: [
             {
-                url: './public/favicon.png', 
+                url: '/public/favicon.png', 
                 width: 1200,
                 height: 630,
                 alt: 'Zeal Tesfaye - Full-Stack Developer',
@@ -42,7 +42,7 @@ export const metadata = {
         title: metaTitle,
         description: description,
         creator: '@zeal-tesfaye', 
-        images: ['./public/favicon.png'], 
+        images: ['/public/favicon.png'], 
     },
     robots: {
         index: true,
@@ -56,9 +56,9 @@ export const metadata = {
         },
     },
     icons: {
-        icon: '/favicon.png',
-        shortcut: '/favicon.png',
-        apple: '/favicon.png',
+        icon: 'public/favicon.png',
+        shortcut: 'public/favicon.png',
+        apple: 'public/favicon.png',
     },
 };
 
