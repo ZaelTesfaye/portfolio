@@ -29,8 +29,8 @@ export const metadata = {
         images: [
             {
                 url: '/favicon.png', 
-                width: 1200,
-                height: 630,
+                width: 200,
+                height: 200,
                 alt: 'Zeal Tesfaye - Full-Stack Developer',
             },
         ],
@@ -38,7 +38,7 @@ export const metadata = {
         type: 'website',
     },
     twitter: {
-        card: 'summary_large_image',
+        card: 'summary',
         title: metaTitle,
         description: description,
         creator: '@zeal-tesfaye', 
