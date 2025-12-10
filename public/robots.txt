@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://zealtesfaye.me
+Host: https://zealtesfaye.dev
 
 # Sitemaps
-Sitemap: https://zealtesfaye.me/sitemap.xml
+Sitemap: https://zealtesfaye.dev/sitemap.xml
