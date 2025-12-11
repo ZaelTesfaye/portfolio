@@ -52,7 +52,7 @@ const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => { } }) => {
                         <li key={item.id}>
                             <button
                                 onClick={() => scrollToSection(item.id)}
-                                className="hover:text-primary font-medium text-[14px] sm:text-[16px] transition-colors">
+                                className="py-2 sm:py-4 hover:text-primary font-medium text-[14px] sm:text-[16px] transition-colors">
                                 {item.name}
                             </button>
                         </li>
