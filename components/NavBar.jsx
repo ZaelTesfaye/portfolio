@@ -33,15 +33,21 @@ const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => { } }) => {
 
     return (
         <header
-            className="flex flex-col sm:flex-row justify-between items-center w-full px-2 sm:px-16 sm:pl-8 md:pl-24 py-4 sm:py-7 z-10 fixed top-0 left-0 right-0 bg-transparent backdrop-blur-sm border-b border-border/40 shadow-lg transition-all duration-300">
-            {/* Logo */}
-            <div className="flex items-center gap-4 mb-2 sm:mb-0">
-                <Button variant={"ghost"} onClick={() => scrollToSection("landing")}
-                    className="text-lg sm:text-xl md:text-3xl border-none  font-semibold">Z.T
-                </Button>
+            className="flex flex-col sm:flex-row justify-between items-center w-full px-4 sm:px-16 sm:pl-8 md:pl-24 py-2 sm:py-4 z-10 fixed top-0 left-0 right-0 bg-transparent backdrop-blur-sm border-b border-border/40 shadow-lg transition-all duration-300">
+            
+            {/* Top bar for mobile, or just logo for desktop */}
+            <div className="w-full flex justify-center items-center sm:w-auto mb-2 sm:mb-0">
+                {/* Logo */}
+                <div className="flex items-center gap-4">
+                    <Button variant={"ghost"} onClick={() => scrollToSection("landing")}
+                        className="text-lg sm:text-xl md:text-3xl border-none font-semibold">Z.T
+                    </Button>
+                </div>
             </div>
-            <nav className="flex items-center gap-5">
-                <ul className="flex flex-wrap justify-center space-x-2 sm:space-x-6 md:space-x-8 items-center">
+
+            {/* Navigation */}
+            <nav className="w-full sm:w-auto flex items-center gap-5">
+                <ul className="w-full sm:w-auto flex flex-wrap justify-center space-x-6 sm:space-x-6 md:space-x-8 items-center">
                     {navItems.map((item) => (
                         <li key={item.id}>
                             <button
@@ -52,12 +58,16 @@ const NavBar = ({ currentSectionId = 0, setCurrentSectionId = () => { } }) => {
                         </li>
                     ))}
                 </ul>
-                <div className="flex items-center">
+                {/* Desktop Theme Toggle */}
+                <div className="hidden sm:flex items-center">
                     <ThemeToggle />
                 </div>
             </nav>
-        </header>
-
+            {/* Mobile Theme Toggle */}
+            <div className="absolute top-2 right-4 sm:hidden">
+                <ThemeToggle />
+            </div>
+        </header>                
     );
 };
 

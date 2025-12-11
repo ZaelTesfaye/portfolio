@@ -29,7 +29,7 @@ const ContactForm = () => {
     };
 
     return (
-        <div className="w-full max-w-4xl mx-auto mt-12">
+        <div className="w-full max-w-4xl mx-auto mt-12 px-4 sm:px-0">
             <div className="bg-card text-card-foreground border border-border rounded-2xl p-6 sm:p-10 shadow-lg">
                 <form onSubmit={handleSubmit} className="flex flex-col gap-6">
 

@@ -27,7 +27,7 @@ const Experience = () => {
                         {experience.map((item, index) => (
                             <motion.div
                                 key={item.id}
-                                className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
+                                className={`relative flex flex-col md:flex-row pl-8 md:pl-0 ${index % 2 === 0 ? 'md:flex-row-reverse' : ''}`}
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
@@ -43,7 +43,7 @@ const Experience = () => {
                                 <div className={`hidden md:block absolute top-8 h-0.5 bg-gray-300 dark:bg-border w-12 ${index % 2 === 0 ? 'left-[calc(50%-3rem)]' : 'left-[50%]'}`} />
 
                                 {/* Content Card */}
-                                <div className="w-full md:w-1/2 ml-12 md:ml-0">
+                                <div className="w-full md:w-1/2 md:ml-0">
                                     <div className={`relative bg-card text-card-foreground p-6 rounded-2xl border border-gray-300 dark:border-border hover:shadow-lg hover:scale-[1.015] hover:cursor-pointer transition-all duration-500 ease-in-out transform-gpu ${index % 2 === 0 ? 'md:mr-12' : 'md:ml-12'}`}>
 
                                         {/* Date Badge */}

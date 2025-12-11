@@ -74,7 +74,7 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                     />
                 </motion.div>
                 <motion.div
-                    className="text-center md:text-left space-y-2 sm:space-y-4"
+                    className="text-center md:text-left space-y-4 sm:space-y-4"
                     variants={childVariants}
                 >
                     <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">Zeal Tesfaye</h2>

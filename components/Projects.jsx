@@ -21,11 +21,11 @@ export default function Projects() {
   return (
     <motion.section
       id="projects"
-      className="bg-transparent pt-44"
+      className="bg-transparent pt-24 sm:pt-44"
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
-      viewport={{ once: true, amount: 0.2 }}
+      viewport={{ once: true, amount: 0.1 }}
     >
       <div className="w-full flex flex-col gap-4 items-center px-4">
         <h1 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Latest Projects</h1>
@@ -38,8 +38,7 @@ export default function Projects() {
               className="px-2 transform transition-transform duration-300"
             >
               <div
-                className="min-w-full sm:min-w-64 bg-card text-card-foreground rounded-3xl p-4 md:p-6 flex flex-col border-2 border-border hover:scale-[1.02] hover:cursor-pointer transition-transform duration-500 shadow-sm hover:shadow-md"
-                style={{ height: '650px' }}
+                className="min-w-full sm:min-w-64 bg-card text-card-foreground rounded-3xl p-4 md:p-6 flex flex-col border-2 border-border hover:scale-[1.02] hover:cursor-pointer transition-transform duration-500 shadow-sm hover:shadow-md min-h-[500px] sm:h-[650px]"
                 onClick={() => handleProjectClick(project)}
               >
                 <div className="relative w-full aspect-square mb-4 rounded-2xl overflow-hidden">
