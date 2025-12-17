@@ -1,6 +1,6 @@
 const experience = [
   {
-    id: 1,
+    id: 2,
     date: "December 2024 - june 2025",
     role: "Solo Dev - DesoNames.xyz",
     description: [
@@ -11,7 +11,15 @@ const experience = [
     ],
   },
   {
-    id: 2,
+    id: 1,
+    date: "February 2025 - June 2025",
+    role: "Mentor at Skill Spectrum - AASTU",
+    description: [
+      "Mentored juniors learning web development on the frontend & backend with technologies including HTML, CSS, JavaScript, React & Node",
+    ],
+  },
+  {
+    id: 3,
     date: "July 2024 - September 20204",
     role: "Developer Intern",
     company: "Pixel Addis",
