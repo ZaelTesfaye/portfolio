@@ -15,7 +15,7 @@ const experience = [
     date: "February 2025 - June 2025",
     role: "Mentor at Skill Spectrum - AASTU",
     description: [
-      "Mentored juniors learning web development on the frontend & backend with technologies including HTML, CSS, JavaScript, React & Node",
+      "Mentored juniors learning frontend & backend web development with technologies including HTML, CSS, JavaScript, React & Node",
     ],
   },
   {
