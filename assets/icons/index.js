@@ -26,7 +26,7 @@ import Supabase from "./Supabase.png";
 import Tailwind from "./Tailwind.png";
 import terraform from "./terraform.png";
 import typescript from "./typescript.png";
-import go from '/go.png'
+import go from './go.png'
 import python from './python.png'
 
 export {
