@@ -1,4 +1,6 @@
 import {
+  python,
+  go,
   node as nodejs,
   typescript,
   react,
@@ -41,10 +43,11 @@ const devSKills = {
       skills: [
         { name: "Node.js", icon: nodejs },
         { name: "Express", icon: express },
-        { name: "MongoDB", icon: mongodb },
-        { name: "MySQL", icon: mySql },
-        { name: "Firebase", icon: firebase },
+        { name: "Go", icon: go },
+        { name: "Python", icon: python },
         { name: "Postgres", icon: postgres },
+        { name: "MongoDB", icon: mongodb },
+        { name: "Firebase", icon: firebase },
       ],
     },
     {
