@@ -169,11 +169,31 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                         </div>
 
                         <div className="flex-1 bg-background">
-                            <iframe
-                                title="Zeal Tesfaye CV"
-                                src="/_Zeal_Tesfaye.pdf"
+                            <object
+                                data="/_Zeal_Tesfaye.pdf"
+                                type="application/pdf"
                                 className="w-full h-full"
-                            />
+                                aria-label="Zeal Tesfaye CV"
+                            >
+                                <div className="w-full h-full flex flex-col items-center justify-center gap-3 px-6 text-center">
+                                    <p className="text-sm sm:text-base text-muted-foreground">
+                                        Your browser blocked inline PDF preview.
+                                    </p>
+                                    <div className="flex flex-wrap items-center justify-center gap-2">
+                                        <Button asChild variant="outline" size="sm">
+                                            <a href="/_Zeal_Tesfaye.pdf" target="_blank" rel="noopener noreferrer">
+                                                Open in new tab
+                                            </a>
+                                        </Button>
+                                        <Button asChild size="sm">
+                                            <a href="/_Zeal_Tesfaye.pdf" download>
+                                                <Download className="w-4 h-4" />
+                                                Download CV
+                                            </a>
+                                        </Button>
+                                    </div>
+                                </div>
+                            </object>
                         </div>
                     </div>
                 </div>
