@@ -1,12 +1,11 @@
 import {
   nextjsIcon as nextJs,
-  Supabase as supabase,
   Tailwind as tailwind,
   react,
   node as nodejs,
   express,
   MongoDB as mongodb,
-  reactnative as reactNative,
+  reactnative,
   firebase,
   redis,
   bullMq,
@@ -15,6 +14,7 @@ import {
   docker,
   postgres,
   actions,
+  Supabase as supabase,
   socketIo as socket,
 } from "../assets/icons";
 import {
@@ -40,13 +40,13 @@ const projects = [
     alt: "Deso Domain Auction",
     topLink: true,
     fullDescription: [
-      "Designed & Built from scratch an advanced domain auction platform on the deso blockchain that allows exchanging of domains names through instant transfers or an extensible auction.",
-      "Domains are the most valuable assets on the blockchain, serving as a shorter representation for wallet addresses, a username for Deso based social medias and a ticker for Deso based tokens, yet had no way for exchanging them.",
-      "The platform enables users to buy and sell usernames through instant transfers or through an auction where users bid on a doamin for a period of time with an option to extend it with each bid.",
-      "Built with Next Js for the frotnend with Tailwind for styling and Node/Express for the backend with Redis for caching and Bull MQ for handling background jobs.",
+      "Architected and launched a production domain auction platform on the Deso blockchain with real-time transfers and extensible auction flows.",
+      "Implemented backend services with Node.js and Express, PostgreSQL for persistence, Redis for caching, and BullMQ for background processing.",
+      "Built a responsive frontend using Next.js and Tailwind CSS and integrated Deso APIs for username/domain operations.",
+      "Dockerized the platform and deployed on AWS EC2 with Nginx reverse proxy and automated CI/CD through GitHub Actions.",
     ],
     description:
-      "Designed & Built from scratch an advanced domain auction platform on the deso blockchain.",
+      "Production blockchain domain auction platform with real-time transfers and extensible bidding.",
     stack: [
       {
         name: "Next Js",
@@ -69,7 +69,7 @@ const projects = [
         icon: redis,
       },
       {
-        name: "Blull MQ",
+        name: "Bull MQ",
         icon: bullMq,
       },
       {
@@ -96,14 +96,12 @@ const projects = [
     alt: "Task Flow Project Manager app",
     topLink: true,
     description:
-      "A project management app that helps teams assign & manage tasks and collaborate on projects effectively.",
+      "Multi-role project management platform with Admin, User, and API surfaces and full RBAC.",
     fullDescription: [
-      "Production ready project management web app  that helps teams assign & manage tasks and collaborate on projects effectively.",
-      "The project is built with industry standards for both development and deployment with 3 main sections, Admin frontend, Client frontend & Backend API all containerized & hosted on a single AWS EC2 instance with nginx infront of them.",
-      "The Admin Frontend built with vite/react, User Frontend built with nextJs & Backend API with Express JS with role based access (User, Admin, & Super-Admin)",
-      "Containerized with docker and Depoyed to AWS EC2 with nginx infront of it for load balancing and reverse proxy & github actions for CI/CD.",
-      "The user site leverages Next.js, with Tailwind CSS for responsive design, Zustand for lightweight state management",
-      "The backend API, built with Express.js, incorporates Prisma ORM for type-safe database interactions with PostgreSQL, JWT-based authentication , CORS handling, and structured routes Role-based access control ensures secure endpoint, with validation schemas using Joi",
+      "Designed a three-surface platform: Admin dashboard (Vite/React), User application (Next.js), and a shared Express REST API.",
+      "Implemented role-based access control flows for User, Admin, and Super Admin routes.",
+      "Containerized all services with Docker and deployed on AWS EC2 behind Nginx for reverse proxy and traffic routing.",
+      "Integrated PostgreSQL-backed API services with authentication and validation pipelines suitable for production use.",
     ],
     stack: [
       {
@@ -229,15 +227,16 @@ const projects = [
     alt: "Business Directory app",
     topLink: true,
     description:
-      "A cross platform mobile app that serves as one place to access details & rating of local businesses and for business owners to promote their businesses.",
+      "Cross-platform mobile app for local business discovery and owner self-service listing management.",
     fullDescription: [
-      "A cross platform mobile app, that serves as one place to access details & rating of local businesses and for business owners to promote their businesses.",
-      "Built with React Native for cross platform compatiblity &  Firebase for authentication and database.",
+      "Developed a React Native mobile app that helps users discover local businesses, view ratings, and access contact information.",
+      "Implemented owner-facing listing workflows and core data flows for iOS and Android clients.",
+      "Integrated Firebase for authentication and managed app data services.",
     ],
     stack: [
       {
         name: "React Native",
-        icon: react,
+        icon: reactnative,
       },
       {
         name: "Firebase",

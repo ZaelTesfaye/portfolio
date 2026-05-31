@@ -1,13 +1,15 @@
 'use client';
 
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, Linkedin } from 'lucide-react';
+import { Download, Github, Linkedin, X } from 'lucide-react';
 import { profilePicture } from '../assets/images';
 import { Button } from './ui';
 import NavBar from "./NavBar.jsx";
 
 export default function Landing({ currentSectionId, setCurrentSectionId }) {
+    const [isCvModalOpen, setIsCvModalOpen] = useState(false);
     const sections = ['landing', 'about', 'skills', 'projects', 'contact'];
     const scrollToSection = (id) => {
         const section = document.getElementById(id);
@@ -46,6 +48,26 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
         },
     };
 
+    useEffect(() => {
+        const onKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setIsCvModalOpen(false);
+            }
+        };
+
+        if (isCvModalOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        window.addEventListener('keydown', onKeyDown);
+        return () => {
+            document.body.style.overflow = '';
+            window.removeEventListener('keydown', onKeyDown);
+        };
+    }, [isCvModalOpen]);
+
     return (
         <div
             id="landing"
@@ -78,16 +100,14 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                     variants={childVariants}
                 >
                     <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold">Zeal Tesfaye</h2>
-                    <p className="text-lg sm:text-2xl md:text-3xl text-muted-foreground">Full-stack Developer</p>
+                    <p className="text-lg sm:text-2xl md:text-3xl text-muted-foreground">Full-Stack Software Engineer</p>
                     <div className="flex justify-center md:justify-start space-x-2 sm:space-x-4">
-                        <Button className="hover:scale-110 text-xs sm:text-base transition-transform duration-500" variant="outline">
-                            <a
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                href="https://drive.google.com/file/d/1eSQdb_qEKOoShHf2ffAre5BeQKJGmCBx/view?usp=sharing"
-                            >
-                                View CV
-                            </a>
+                        <Button
+                            className="hover:scale-110 text-xs sm:text-base transition-transform duration-500"
+                            variant="outline"
+                            onClick={() => setIsCvModalOpen(true)}
+                        >
+                            View CV
                         </Button>
                         <Button
                             className="hover:scale-105 text-xs sm:text-base transition-transform duration-500"
@@ -118,6 +138,46 @@ export default function Landing({ currentSectionId, setCurrentSectionId }) {
                     </div>
                 </motion.div>
             </motion.main>
+
+            {isCvModalOpen && (
+                <div
+                    className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center px-3 sm:px-6"
+                    onClick={() => setIsCvModalOpen(false)}
+                >
+                    <div
+                        className="w-full max-w-5xl h-[85vh] bg-card border border-border rounded-xl shadow-2xl flex flex-col overflow-hidden"
+                        onClick={(event) => event.stopPropagation()}
+                    >
+                        <div className="flex items-center justify-between border-b border-border px-4 py-3">
+                            <h3 className="font-semibold text-sm sm:text-base">Zeal Tesfaye CV</h3>
+                            <div className="flex items-center gap-2">
+                                <Button asChild size="sm" variant="outline">
+                                    <a href="/_Zeal_Tesfaye.pdf" download>
+                                        <Download className="w-4 h-4" />
+                                        Download
+                                    </a>
+                                </Button>
+                                <Button
+                                    size="icon"
+                                    variant="ghost"
+                                    aria-label="Close CV modal"
+                                    onClick={() => setIsCvModalOpen(false)}
+                                >
+                                    <X className="w-4 h-4" />
+                                </Button>
+                            </div>
+                        </div>
+
+                        <div className="flex-1 bg-background">
+                            <iframe
+                                title="Zeal Tesfaye CV"
+                                src="/_Zeal_Tesfaye.pdf"
+                                className="w-full h-full"
+                            />
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

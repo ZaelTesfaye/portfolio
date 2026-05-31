@@ -10,13 +10,13 @@ export default function AboutMe() {
         {
             icon: Award,
             title: "Experience",
-            description: "1+ year in Web Development",
+            description: "2+ years building production systems",
             color: "blue"
         },
         {
             icon: GraduationCap,
             title: "Education",
-            description: "B.SC in Software Engineering",
+            description: "BSc Software Engineering (Sep 2023 - May 2027)",
             color: "blue"
         }
     ];
@@ -90,9 +90,9 @@ export default function AboutMe() {
                     {/* Text Content */}
                     <div className="md:w-1/2 flex gap-12 flex-col items-center text-center md:items-start md:text-left">
                         <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed ">
-                            Full Stack developer with hands-on experience in building web applications and backend systems.
-                            Specialized skills on React, Next JS, Node.js/Express, SQL & NoSQL databases and DevOps tools & practices. High commitment to learning.
-                            Open to contribute to existing & new projects. Able to work with minimal supervision.
+                            Full-Stack Engineer with professional experience shipping production systems across AI and blockchain domains.
+                            I own end-to-end delivery from architecture to AWS deployment using Node.js, Go, React/Next.js, and Python.
+                            Comfortable working remotely with minimal supervision while handling multiple concurrent projects.
                         </p>
 
                         <div className="flex flex-col  sm:flex-row gap-4 w-full">
